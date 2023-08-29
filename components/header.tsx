@@ -21,9 +21,21 @@ export default function Header() {
 				<div className='container max-w-6xl mx-auto text-sm flex items-center justify-between'>
 					<div className='flex items-center'>
 						<div className=' flex items-center space-x-3 text-gray-600'>
-							<Facebook size='1.5em' variant='Bold' className='hover:text-emerald-500 transition' />
-							<Instagram size='1.5em' variant='Bold' className='hover:text-emerald-500 transition' />
-							<Youtube size='1.5em' variant='Bold' className='hover:text-emerald-500 transition' />
+							<Facebook
+								size='1.5em'
+								variant='Bold'
+								className='hover:text-emerald-500 transition'
+							/>
+							<Instagram
+								size='1.5em'
+								variant='Bold'
+								className='hover:text-emerald-500 transition'
+							/>
+							<Youtube
+								size='1.5em'
+								variant='Bold'
+								className='hover:text-emerald-500 transition'
+							/>
 						</div>
 
 						<div className='bg-emerald-500 ml-3 [clip-path:polygon(0_0,90%_0,100%_100%,10%_100%)] py-4 px-8'>
@@ -36,10 +48,16 @@ export default function Header() {
 					</div>
 
 					<nav className='flex text-gray-400 items-center space-x-7'>
-						<Link href={''} className='transition hover:text-emerald-500'>
+						<Link
+							href={''}
+							className='transition hover:text-emerald-500'
+						>
 							Đăng nhập
 						</Link>
-						<Link href={''} className='transition hover:text-emerald-500'>
+						<Link
+							href={''}
+							className='transition hover:text-emerald-500'
+						>
 							Đăng kí
 						</Link>
 					</nav>
@@ -83,7 +101,10 @@ export default function Header() {
 							{ name: 'backend', href: '/tag/backend' },
 							{ name: 'flutter', href: '/tag/flutter' },
 							{ name: 'tài liệu', href: '/tag/resources' },
-							{ name: 'tips & tricks', href: '/tag/tips-and-tricks' },
+							{
+								name: 'tips & tricks',
+								href: '/tag/tips-and-tricks',
+							},
 							{ name: 'news', href: '/tag/news' },
 							{ name: 'windows', href: '/tag/windows' },
 							{ name: 'macos', href: '/tag/macos' },
