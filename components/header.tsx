@@ -11,6 +11,7 @@ import {
 import moment from 'moment'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import 'moment/locale/vi'
 
 export default function Header() {
 	const pathname = usePathname()
