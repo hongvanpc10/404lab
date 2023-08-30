@@ -384,7 +384,7 @@ export default function BlogDetail() {
 				</div>
 
 				<div>
-					<div className='space-y-16 sticky top-9'>
+					<div className='space-y-16 sticky top-6'>
 						<div>
 							<Title className='!text-xl !mb-4'>Mục lục</Title>
 
