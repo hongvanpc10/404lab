@@ -1,4 +1,6 @@
+import { BlogCardHorizontal } from '@/components/blogCard'
 import Image from '@/components/image'
+import Title from '@/components/title'
 import routes from '@/configs/routes'
 import { Apple, Clock, Copy, Facebook, Home, Instagram } from 'iconsax-react'
 import moment from 'moment'
@@ -62,6 +64,36 @@ export default function BlogDetail() {
 				src='https://statics.cdn.200lab.io/2022/11/web-development-la--gi--.png'
 				className='aspect-w-16 aspect-h-9 rounded'
 			/>
+
+			<p></p>
+
+			<div className='h-0.5 bg-gray-700 mt-14 mb-8' />
+
+			<div className='flex items-center flex-wrap'>
+				<Link
+					href={''}
+					className='py-1.5 px-4 rounded transition hover:bg-emerald-500 text-[0.9375rem] bg-gray-700 mr-2.5 mb-2'
+				>
+					#python
+				</Link>
+				<Link
+					href={''}
+					className='py-1.5 px-4 rounded transition hover:bg-emerald-500 text-[0.9375rem] bg-gray-700 mr-2.5 mb-2'
+				>
+					#tài liệu
+				</Link>
+			</div>
+
+			<div className='max-w-3xl mt-16 mx-auto'>
+				<Title>Bài viết liên quan</Title>
+
+				<div className='space-y-8'>
+					<BlogCardHorizontal />
+					<BlogCardHorizontal />
+					<BlogCardHorizontal />
+					<BlogCardHorizontal />
+				</div>
+			</div>
 		</div>
 	)
 }

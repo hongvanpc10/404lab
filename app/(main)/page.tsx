@@ -1,5 +1,5 @@
 import { BlogCard, FeaturedBlogCard } from '@/components/blogCard'
-import Title from '@/components/home/title'
+import Title from '@/components/title'
 
 export default function Home() {
 	return (
