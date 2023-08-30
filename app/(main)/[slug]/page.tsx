@@ -388,7 +388,7 @@ export default function BlogDetail() {
 						<div>
 							<Title className='!text-xl !mb-4'>Mục lục</Title>
 
-							<ul className='ml-2 space-y-1.5'>
+							<ul className='ml-2 space-y-2'>
 								<li className='text-gray-300 text-[0.9375rem] transition hover:text-emerald-500'>
 									<Link href={''}>
 										1. Avro là gì? Vì sao cần dùng Avro với
