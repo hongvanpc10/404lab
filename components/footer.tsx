@@ -108,7 +108,7 @@ export default function Footer() {
 			<div className='flex items-center justify-center h-16'>
 				© Copyright 2023 <span className='mx-2'>-</span>
 				<Link href={routes.home} className='text-emerald-500'>
-					404lab
+					404Lab
 				</Link>
 			</div>
 		</footer>

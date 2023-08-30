@@ -4,7 +4,7 @@ import './globals.css'
 import moment from 'moment'
 
 export const metadata: Metadata = {
-	title: '404lab',
+	title: '404Lab',
 	description: 'Blog chia sẻ kĩ thuật lập trình',
 }
 

@@ -9,7 +9,7 @@ export default function Logo() {
 			className={`text-4xl ${fonts.nunito.className} inline-flex items-start font-bold tracking-wider`}
 		>
 			<span className='text-emerald-500'>404</span>
-			<span>lab</span>
+			<span>Lab</span>
 			<span className='inline-block font-semibold px-1 text-xs ml-1 rounded mt-1.5 bg-emerald-500'>
 				Blog
 			</span>
