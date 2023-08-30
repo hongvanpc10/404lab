@@ -1,12 +1,7 @@
 'use client'
 
 import Logo from '@/components/logo'
-import {
-	Facebook,
-	Instagram,
-	Sun1,
-	Youtube
-} from 'iconsax-react'
+import { Facebook, Instagram, Sun1, Youtube } from 'iconsax-react'
 import moment from 'moment'
 import 'moment/locale/vi'
 import Link from 'next/link'
