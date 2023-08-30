@@ -29,7 +29,9 @@ const config: Config = {
 						'--tw-prose-bullets': theme('colors.emerald[500]'),
 						'--tw-prose-hr': theme('colors.gray[700]'),
 						'--tw-prose-quotes': theme('colors.emerald[500]'),
-						'--tw-prose-quote-borders': theme('colors.emerald[500]'),
+						'--tw-prose-quote-borders': theme(
+							'colors.emerald[500]'
+						),
 						'--tw-prose-captions': theme('colors.gray[400]'),
 						'--tw-prose-code': theme('colors.pink[600]'),
 						'--tw-prose-pre-code': theme('colors.gray[200]'),
@@ -41,20 +43,41 @@ const config: Config = {
 						'--tw-prose-invert-lead': theme('colors.emerald[300]'),
 						'--tw-prose-invert-links': theme('colors.white'),
 						'--tw-prose-invert-bold': theme('colors.white'),
-						'--tw-prose-invert-counters': theme('colors.emerald[400]'),
-						'--tw-prose-invert-bullets': theme('colors.emerald[600]'),
+						'--tw-prose-invert-counters': theme(
+							'colors.emerald[400]'
+						),
+						'--tw-prose-invert-bullets': theme(
+							'colors.emerald[600]'
+						),
 						'--tw-prose-invert-hr': theme('colors.emerald[700]'),
-						'--tw-prose-invert-quotes': theme('colors.emerald[100]'),
-						'--tw-prose-invert-quote-borders':
-							theme('colors.emerald[700]'),
-						'--tw-prose-invert-captions': theme('colors.emerald[400]'),
+						'--tw-prose-invert-quotes': theme(
+							'colors.emerald[100]'
+						),
+						'--tw-prose-invert-quote-borders': theme(
+							'colors.emerald[700]'
+						),
+						'--tw-prose-invert-captions': theme(
+							'colors.emerald[400]'
+						),
 						'--tw-prose-invert-code': theme('colors.white'),
-						'--tw-prose-invert-pre-code': theme('colors.emerald[300]'),
+						'--tw-prose-invert-pre-code': theme(
+							'colors.emerald[300]'
+						),
 						'--tw-prose-invert-pre-bg': 'rgb(0 0 0 / 50%)',
-						'--tw-prose-invert-th-borders':
-							theme('colors.emerald[600]'),
-						'--tw-prose-invert-td-borders':
-							theme('colors.emerald[700]'),
+						'--tw-prose-invert-th-borders': theme(
+							'colors.emerald[600]'
+						),
+						'--tw-prose-invert-td-borders': theme(
+							'colors.emerald[700]'
+						),
+					},
+				},
+				DEFAULT: {
+					css: {
+						img: {
+							width: '100%',
+							borderRadius: '0.25rem'
+						},
 					},
 				},
 			}),
