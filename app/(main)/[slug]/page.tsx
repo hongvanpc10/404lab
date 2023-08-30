@@ -383,7 +383,7 @@ export default function BlogDetail() {
 					</blockquote>
 				</div>
 
-				<div className='space-y-16'>
+				<div className='space-y-16 sticky top-9'>
 					<div>
 						<Title className='!text-xl !mb-4'>Mục lục</Title>
 
