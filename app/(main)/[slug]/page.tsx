@@ -65,7 +65,7 @@ export default function BlogDetail() {
 				className='aspect-w-16 aspect-h-9 rounded'
 			/>
 
-			<div className='flex mt-16'>
+			<div className='flex mt-10'>
 				<div className='prose mr-6 w-9/12 prose-lg prose-emerald max-w-none'>
 					<p>
 						<strong>Bắt đầu với ngành lập</strong> trình thường rất
