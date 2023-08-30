@@ -14,8 +14,8 @@ export default function Title({ children, href, className }: Props) {
 		>
 			<h2 className='flex items-center font-bold'>
 				<div className='space-y-[0.225em] mr-[1em]'>
-					<div className='h-[0.1em] w-[2em] bg-emerald-500' />
 					<div className='h-[0.1em] w-[1.25em] bg-emerald-500' />
+					<div className='h-[0.1em] w-[2em] bg-emerald-500' />
 					<div className='h-[0.1em] w-[0.75em] bg-emerald-500' />
 				</div>
 
