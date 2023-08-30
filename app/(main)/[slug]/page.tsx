@@ -383,61 +383,63 @@ export default function BlogDetail() {
 					</blockquote>
 				</div>
 
-				<div className='space-y-16 sticky top-9'>
-					<div>
-						<Title className='!text-xl !mb-4'>Mục lục</Title>
+				<div>
+					<div className='space-y-16 sticky top-9'>
+						<div>
+							<Title className='!text-xl !mb-4'>Mục lục</Title>
 
-						<ul className='ml-2 space-y-1'>
-							<li className='text-gray-300 text-[0.9375rem] transition hover:text-emerald-500'>
-								<Link href={''}>
-									1. Avro là gì? Vì sao cần dùng Avro với
-									Kafka
-								</Link>
-							</li>
-							<li className='text-gray-300 text-[0.9375rem] transition hover:text-emerald-500'>
-								<Link href={''}>
-									2. Schema Registry: Hiểu rõ hơn về cơ sở dữ
-									liệu Schema
-								</Link>
-							</li>
-							<li className='text-gray-300 text-[0.9375rem] transition hover:text-emerald-500'>
-								<Link href={''}>
-									3. Thay đổi dữ liệu dễ dàng với Avro Schema
-									Evolution
-								</Link>
-							</li>
-							<li className='text-gray-300 text-[0.9375rem] transition hover:text-emerald-500'>
-								<Link href={''}>
-									4. Schema Compatibility: Đảm bảo dữ liệu
-									luôn đồng nhất
-								</Link>
-							</li>
+							<ul className='ml-2 space-y-1'>
+								<li className='text-gray-300 text-[0.9375rem] transition hover:text-emerald-500'>
+									<Link href={''}>
+										1. Avro là gì? Vì sao cần dùng Avro với
+										Kafka
+									</Link>
+								</li>
+								<li className='text-gray-300 text-[0.9375rem] transition hover:text-emerald-500'>
+									<Link href={''}>
+										2. Schema Registry: Hiểu rõ hơn về cơ sở
+										dữ liệu Schema
+									</Link>
+								</li>
+								<li className='text-gray-300 text-[0.9375rem] transition hover:text-emerald-500'>
+									<Link href={''}>
+										3. Thay đổi dữ liệu dễ dàng với Avro
+										Schema Evolution
+									</Link>
+								</li>
+								<li className='text-gray-300 text-[0.9375rem] transition hover:text-emerald-500'>
+									<Link href={''}>
+										4. Schema Compatibility: Đảm bảo dữ liệu
+										luôn đồng nhất
+									</Link>
+								</li>
 
-							<li className='text-gray-300 text-[0.9375rem] transition hover:text-emerald-500'>
-								<Link href={''}>
-									5. Thực hành Kafka cùng 200Lab nhé!
-								</Link>
-							</li>
-							<li className='text-gray-300 text-[0.9375rem] transition hover:text-emerald-500'>
-								<Link href={''}>6. Tổng kết</Link>
-							</li>
-						</ul>
-					</div>
+								<li className='text-gray-300 text-[0.9375rem] transition hover:text-emerald-500'>
+									<Link href={''}>
+										5. Thực hành Kafka cùng 200Lab nhé!
+									</Link>
+								</li>
+								<li className='text-gray-300 text-[0.9375rem] transition hover:text-emerald-500'>
+									<Link href={''}>6. Tổng kết</Link>
+								</li>
+							</ul>
+						</div>
 
-					<div className='grid grid-cols-3 bg-gray-900 rounded'>
-						<Image
-							alt=''
-							src='https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGFwdG9wfGVufDB8fDB8fHww&w=1000&q=80'
-							className='aspect-w-14 aspect-h-16'
-						/>
+						<div className='grid grid-cols-3 bg-gray-900 rounded'>
+							<Image
+								alt=''
+								src='https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGFwdG9wfGVufDB8fDB8fHww&w=1000&q=80'
+								className='aspect-w-14 aspect-h-16'
+							/>
 
-						<div className='col-span-2 p-4'>
-							<h2 className='text-lg font-bold'>
-								<Link href={''}>Hong Van</Link>
-							</h2>
-							<p className='mt-2 text-[0.9375rem] text-gray-300'>
-								make impossible to possible
-							</p>
+							<div className='col-span-2 p-4'>
+								<h2 className='text-lg font-bold'>
+									<Link href={''}>Hong Van</Link>
+								</h2>
+								<p className='mt-2 text-[0.9375rem] text-gray-300'>
+									make impossible to possible
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
