@@ -383,9 +383,9 @@ export default function BlogDetail() {
 					</blockquote>
 				</div>
 
-				<div>
+				<div className='space-y-16'>
 					<div>
-						<Title className='!text-lg'>Mục lục</Title>
+						<Title className='!text-xl !mb-4'>Mục lục</Title>
 
 						<ul className='ml-2 space-y-1'>
 							<li className='text-gray-300 text-[0.9375rem] transition hover:text-emerald-500'>
@@ -422,6 +422,23 @@ export default function BlogDetail() {
 								<Link href={''}>6. Tổng kết</Link>
 							</li>
 						</ul>
+					</div>
+
+					<div className='grid grid-cols-3 bg-gray-900 rounded'>
+						<Image
+							alt=''
+							src='https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGFwdG9wfGVufDB8fDB8fHww&w=1000&q=80'
+							className='aspect-w-14 aspect-h-16'
+						/>
+
+						<div className='col-span-2 p-4'>
+							<h2 className='text-lg font-bold'>
+								<Link href={''}>Hong Van</Link>
+							</h2>
+							<p className='mt-2 text-[0.9375rem] text-gray-300'>
+								make impossible to possible
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
