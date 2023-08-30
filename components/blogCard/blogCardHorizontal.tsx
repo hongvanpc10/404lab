@@ -1,7 +1,6 @@
-import { CalendarTick } from 'iconsax-react'
-import Image from '../image'
 import moment from 'moment'
 import Link from 'next/link'
+import Image from '../image'
 
 export default function BlogCardHorizontal() {
 	return (

@@ -13,10 +13,10 @@ export default function FeaturedBlogCard({ className }: Props) {
 			<Image
 				alt=''
 				src='https://statics.cdn.200lab.io/2022/11/web-development-la--gi--.png'
-				className='aspect-w-16 h-full aspect-h-12 rounded-sm'
+				className='aspect-w-16 h-full aspect-h-10 rounded-sm'
 			/>
 			<Link href={''}>
-				<div className='bg-gradient-to-t from-black/90 to-transparent absolute inset-0' />
+				<div className='bg-gradient-to-t from-black/80 to-transparent absolute inset-0' />
 			</Link>
 			<div className='absolute inset-x-0 bottom-0 p-5'>
 				<div className='flex items-center mb-1.5 text-sm text-gray-300'>

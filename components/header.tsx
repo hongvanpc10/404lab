@@ -4,14 +4,14 @@ import Logo from '@/components/logo'
 import {
 	Facebook,
 	Instagram,
-	SearchNormal1,
 	Sun1,
-	Youtube,
+	Youtube
 } from 'iconsax-react'
 import moment from 'moment'
+import 'moment/locale/vi'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import 'moment/locale/vi'
+import Search from './search'
 
 export default function Header() {
 	const pathname = usePathname()
@@ -19,7 +19,7 @@ export default function Header() {
 	return (
 		<header>
 			<div className='border-b border-emerald-500'>
-				<div className='container max-w-6xl mx-auto text-sm flex items-center justify-between'>
+				<div className='container max-w-6xl text-sm flex items-center justify-between'>
 					<div className='flex items-center'>
 						<div className=' flex items-center space-x-3 text-gray-600'>
 							<Facebook
@@ -53,6 +53,12 @@ export default function Header() {
 							href={''}
 							className='transition hover:text-emerald-500'
 						>
+							Forum
+						</Link>
+						<Link
+							href={''}
+							className='transition hover:text-emerald-500'
+						>
 							Đăng nhập
 						</Link>
 						<Link
@@ -65,31 +71,22 @@ export default function Header() {
 				</div>
 			</div>
 
-			<div className='container max-w-6xl mx-auto flex items-center justify-between py-6'>
+			<div className='container max-w-6xl flex items-center justify-between py-6 lg:flex-row flex-col'>
 				<Logo />
 
-				<div className='flex items-center'>
-					<div className='bg-gray-900 flex items-center pl-14 pr-8 [clip-path:polygon(0_0,96%_0,100%_100%,4%_100%)]'>
-						<input
-							className='bg-transparent outline-none py-2.5 w-80'
-							placeholder='Tìm bài viết'
-						/>
-						<button className='p-1'>
-							<SearchNormal1
-								size='1.25em'
-								className='text-emerald-500'
-							/>
+				<div className='lg:mt-0 mt-8'>
+					<div className='flex items-center'>
+						<Search />
+
+						<button className='ml-7'>
+							<Sun1 size='1.5em' />
 						</button>
 					</div>
-
-					<button className='ml-7'>
-						<Sun1 size='1.5em' />
-					</button>
 				</div>
 			</div>
 
 			<div className='bg-gray-900'>
-				<div className='container max-w-6xl mx-auto'>
+				<div className='container max-w-6xl'>
 					<nav className='flex w-full no-scrollbar whitespace-nowrap overflow-x-auto overflow-y-hidden space-x-3 items-center mx-auto text-gray-400'>
 						{[
 							{ name: 'home', href: '/' },

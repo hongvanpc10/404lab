@@ -6,7 +6,7 @@ export default function Footer() {
 	return (
 		<footer>
 			<div className='bg-gray-900 py-10'>
-				<div className='container max-w-6xl mx-auto gap-8 grid grid-cols-3'>
+				<div className='container max-w-6xl gap-8 grid grid-cols-3'>
 					<Logo />
 
 					<section>
@@ -17,8 +17,8 @@ export default function Footer() {
 							<div className='h-[1px] ml-4 flex-1 bg-emerald-500' />
 						</div>
 
-						<div className='space-y-2'>
-							<div className='flex items-start'>
+						<ul className='space-y-2'>
+							<li className='flex items-start'>
 								<div className='w-1.5 h-1.5 mt-2 text-sm rounded-full bg-emerald-500 mr-4' />
 								<Link
 									href={''}
@@ -28,8 +28,8 @@ export default function Footer() {
 									Confluent & Go Kafka cơ bản: Cách sử dụng
 									Kafka với Confluent & Go
 								</Link>
-							</div>
-							<div className='flex items-start'>
+							</li>
+							<li className='flex items-start'>
 								<div className='w-1.5 h-1.5 mt-2 text-sm rounded-full bg-emerald-500 mr-4' />
 								<Link
 									href={''}
@@ -39,8 +39,8 @@ export default function Footer() {
 									Confluent & Go Kafka cơ bản: Cách sử dụng
 									Kafka với Confluent & Go
 								</Link>
-							</div>
-							<div className='flex items-start'>
+							</li>
+							<li className='flex items-start'>
 								<div className='w-1.5 h-1.5 mt-2 text-sm rounded-full bg-emerald-500 mr-4' />
 								<Link
 									href={''}
@@ -50,8 +50,8 @@ export default function Footer() {
 									Confluent & Go Kafka cơ bản: Cách sử dụng
 									Kafka với Confluent & Go
 								</Link>
-							</div>
-							<div className='flex items-start'>
+							</li>
+							<li className='flex items-start'>
 								<div className='w-1.5 h-1.5 mt-2 text-sm rounded-full bg-emerald-500 mr-4' />
 								<Link
 									href={''}
@@ -61,8 +61,8 @@ export default function Footer() {
 									Confluent & Go Kafka cơ bản: Cách sử dụng
 									Kafka với Confluent & Go
 								</Link>
-							</div>
-						</div>
+							</li>
+						</ul>
 					</section>
 
 					<section>

@@ -7,7 +7,7 @@ export default function Home() {
 			<section>
 				<Title href='/all'>BÀI VIẾT MỚI</Title>
 
-				<div className='grid-cols-3 gap-6 grid'>
+				<div className='lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-6 lg:gap-6 grid'>
 					<BlogCard />
 					<BlogCard />
 					<BlogCard />
@@ -20,8 +20,8 @@ export default function Home() {
 			<section>
 				<Title>BÀI VIẾT NỔI BẬT</Title>
 
-				<div className='grid grid-cols-3 gap-6 grid-rows-2'>
-					<FeaturedBlogCard className='col-span-2 row-span-2' />
+				<div className='grid lg:grid-cols-3 grid-cols-1 gap-6 lg:grid-rows-2'>
+					<FeaturedBlogCard className='lg:col-span-2 lg:row-span-2' />
 					<FeaturedBlogCard />
 					<FeaturedBlogCard />
 				</div>
@@ -30,7 +30,7 @@ export default function Home() {
 			<section>
 				<Title href='/d'>PYTHON</Title>
 
-				<div className='grid-cols-3 gap-6 grid'>
+				<div className='lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-6 lg:gap-6 grid'>
 					<BlogCard />
 					<BlogCard />
 					<BlogCard />

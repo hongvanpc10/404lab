@@ -10,7 +10,7 @@ export default function MainLayout({
 		<div>
 			<Header />
 
-			<main className='container mx-auto max-w-6xl pt-12 pb-36'>
+			<main className='container max-w-6xl pt-12 pb-36'>
 				{children}
 			</main>
 
