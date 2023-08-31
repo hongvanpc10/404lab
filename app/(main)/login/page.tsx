@@ -10,7 +10,7 @@ export default function Login() {
 				Hãy đăng nhập để có được quyền lợi của thành viên
 			</p>
 			<form className='w-full max-w-md space-y-4'>
-				<Input placeholder='Nhập email của bạn' type='email' />
+				<Input placeholder='Nhập email của bạn' autoFocus type='email' />
 				<Input placeholder='Nhập mật khẩu của bạn' type='password' />
 
 				<button className='!mt-10 transition hover:bg-orange-800 py-4 w-full rounded-full text-white bg-emerald-500'>
