@@ -1,6 +1,7 @@
 'use client'
 
 import Logo from '@/components/logo'
+import routes from '@/configs/routes'
 import { Facebook, Instagram, Sun1, Youtube } from 'iconsax-react'
 import moment from 'moment'
 import 'moment/locale/vi'
@@ -45,19 +46,19 @@ export default function Header() {
 
 					<nav className='flex text-gray-400 items-center space-x-7'>
 						<Link
-							href={''}
+							href={routes.forum}
 							className='transition hover:text-emerald-500'
 						>
 							Forum
 						</Link>
 						<Link
-							href={''}
+							href={routes.login}
 							className='transition hover:text-emerald-500'
 						>
 							Đăng nhập
 						</Link>
 						<Link
-							href={''}
+							href={routes.signup}
 							className='transition hover:text-emerald-500'
 						>
 							Đăng kí

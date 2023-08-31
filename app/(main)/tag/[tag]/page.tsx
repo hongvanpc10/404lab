@@ -29,7 +29,7 @@ export default function BlogsByTag() {
 				<div></div>
 				<div className='flex justify-center text-lg'>Page 1 of 3</div>
 				<div className='flex justify-end'>
-					<Link href={''} className='flex items-center rounded text-sm bg-emerald-500 py-2 px-6 transition hover:bg-amber-600'>
+					<Link href={''} className='flex items-center rounded text-sm bg-emerald-500 py-2 px-6 transition hover:bg-orange-800'>
 						Next <ArrowRight2 size='1em' className='ml-1' />
 					</Link>
 				</div>

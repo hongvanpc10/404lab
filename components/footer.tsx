@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Logo from './logo'
 import routes from '@/configs/routes'
+import { Facebook, Global, Youtube } from 'iconsax-react'
 
 export default function Footer() {
 	return (
@@ -11,58 +12,36 @@ export default function Footer() {
 
 					<section>
 						<div className='flex items-center mb-4'>
-							<h2 className='text-xl font-medium'>
-								Bài viết nổi bật
-							</h2>
+							<h2 className='text-xl font-medium'>Liên kết</h2>
 							<div className='h-[1px] ml-4 flex-1 bg-emerald-500' />
 						</div>
 
-						<ul className='space-y-2'>
-							<li className='flex items-start'>
-								<div className='w-1.5 h-1.5 mt-2 text-sm rounded-full bg-emerald-500 mr-4' />
-								<Link
-									href={''}
-									className='line-clamp-2 flex-1 text-gray-400 transition hover:text-emerald-500'
-								>
-									Kafka cơ bản: Cách sử dụng Kafka với
-									Confluent & Go Kafka cơ bản: Cách sử dụng
-									Kafka với Confluent & Go
-								</Link>
-							</li>
-							<li className='flex items-start'>
-								<div className='w-1.5 h-1.5 mt-2 text-sm rounded-full bg-emerald-500 mr-4' />
-								<Link
-									href={''}
-									className='line-clamp-2 flex-1 text-gray-400 transition hover:text-emerald-500'
-								>
-									Kafka cơ bản: Cách sử dụng Kafka với
-									Confluent & Go Kafka cơ bản: Cách sử dụng
-									Kafka với Confluent & Go
-								</Link>
-							</li>
-							<li className='flex items-start'>
-								<div className='w-1.5 h-1.5 mt-2 text-sm rounded-full bg-emerald-500 mr-4' />
-								<Link
-									href={''}
-									className='line-clamp-2 flex-1 text-gray-400 transition hover:text-emerald-500'
-								>
-									Kafka cơ bản: Cách sử dụng Kafka với
-									Confluent & Go Kafka cơ bản: Cách sử dụng
-									Kafka với Confluent & Go
-								</Link>
-							</li>
-							<li className='flex items-start'>
-								<div className='w-1.5 h-1.5 mt-2 text-sm rounded-full bg-emerald-500 mr-4' />
-								<Link
-									href={''}
-									className='line-clamp-2 flex-1 text-gray-400 transition hover:text-emerald-500'
-								>
-									Kafka cơ bản: Cách sử dụng Kafka với
-									Confluent & Go Kafka cơ bản: Cách sử dụng
-									Kafka với Confluent & Go
-								</Link>
-							</li>
-						</ul>
+						<div className='space-y-5 text-gray-400 text-[0.9375rem]'>
+							<Link href={routes.forum} className='flex items-center transition hover:text-emerald-500'>
+								<Global
+									size='1.25em'
+									variant='Bold'
+									className='mr-6'
+								/>
+								Forum
+							</Link>
+							<Link href={''} className='flex items-center transition hover:text-emerald-500'>
+								<Facebook
+									size='1.25em'
+									variant='Bold'
+									className='mr-6'
+								/>
+								Facebook
+							</Link>
+							<Link href={''} className='flex items-center transition hover:text-emerald-500'>
+								<Youtube
+									size='1.25em'
+									variant='Bold'
+									className='mr-6'
+								/>
+								Youtube
+							</Link>
+						</div>
 					</section>
 
 					<section>
@@ -105,7 +84,7 @@ export default function Footer() {
 				</div>
 			</div>
 
-			<div className='flex items-center justify-center h-16'>
+			<div className='flex items-center bg-gray-900/60 justify-center h-16'>
 				© Copyright 2023 <span className='mx-2'>-</span>
 				<Link href={routes.home} className='text-emerald-500'>
 					404Lab
