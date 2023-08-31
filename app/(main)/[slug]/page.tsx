@@ -2,7 +2,6 @@ import { BlogCardHorizontal } from '@/components/blogCard'
 import Image from '@/components/image'
 import Title from '@/components/title'
 import routes from '@/configs/routes'
-import { Apple, Clock, Copy, Facebook, Home, Instagram } from 'iconsax-react'
 import moment from 'moment'
 import Link from 'next/link'
 
@@ -11,7 +10,7 @@ export default function BlogDetail() {
 		<div>
 			<div className='flex mb-10 items-center text-[0.9375rem] text-gray-400'>
 				<Link href={routes.home} className='flex items-center'>
-					<Home size='1em' className='mr-2' variant='Bold' /> Home
+					<i className='ri-home-4-fill mr-2'></i>
 				</Link>
 				<span className='mx-2.5'>/</span>
 				<Link href={''} className='text-emerald-500'>
@@ -35,7 +34,7 @@ export default function BlogDetail() {
 					</div>
 
 					<span className='flex items-center'>
-						<Clock size='1.125em' className='mr-2' />
+						<i className='ri-time-line mr-2'></i>
 						10 phút đọc
 					</span>
 				</div>
@@ -45,16 +44,16 @@ export default function BlogDetail() {
 				<span className='text-gray-400 mr-4'>Chia sẻ bài viết:</span>
 				<div className='flex items-center space-x-3'>
 					<button className='bg-blue-500 rounded-tr-xl rounded-bl-xl hover:brightness-75 transition py-2 px-1.5'>
-						<Facebook size='1.25em' />
+						<i className='ri-facebook-fill'></i>
 					</button>
 					<button className='bg-purple-500 rounded-tr-xl rounded-bl-xl hover:brightness-75 transition py-2 px-1.5'>
-						<Instagram size='1.25em' />
+						<i className='ri-github-fill'></i>
 					</button>
 					<button className='bg-gray-500 rounded-tr-xl rounded-bl-xl hover:brightness-75 transition py-2 px-1.5'>
-						<Apple size='1.25em' />
+						<i className='ri-linkedin-fill'></i>
 					</button>
 					<button className='bg-rose-500 rounded-tr-xl rounded-bl-xl hover:brightness-75 transition py-2 px-1.5'>
-						<Copy size='1.25em' />
+						<i className='ri-file-copy-line'></i>
 					</button>
 				</div>
 			</div>

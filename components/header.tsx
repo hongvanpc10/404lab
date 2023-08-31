@@ -19,8 +19,8 @@ export default function Header() {
 				<div className='container max-w-6xl text-sm flex items-center justify-between'>
 					<div className='flex items-center'>
 						<div className=' flex items-center space-x-3 text-gray-600'>
-							<i className='hover:text-emerald-500 ri-facebook-box-fill ri-lg transition' />
-							<i className='hover:text-emerald-500 ri-linkedin-box-fill ri-lg transition' />
+							<i className='hover:text-emerald-500 ri-facebook-fill ri-lg transition' />
+							<i className='hover:text-emerald-500 ri-linkedin-fill ri-lg transition' />
 							<i className='hover:text-emerald-500 ri-github-fill ri-lg transition' />
 						</div>
 

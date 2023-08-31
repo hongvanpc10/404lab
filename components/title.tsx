@@ -1,4 +1,3 @@
-import { ArrowRight } from 'iconsax-react'
 import Link from 'next/link'
 
 interface Props {
