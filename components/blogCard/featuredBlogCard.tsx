@@ -1,4 +1,3 @@
-import { CalendarTick } from 'iconsax-react'
 import Image from '../image'
 import moment from 'moment'
 import Link from 'next/link'
@@ -20,7 +19,7 @@ export default function FeaturedBlogCard({ className }: Props) {
 			</Link>
 			<div className='absolute inset-x-0 bottom-0 p-5'>
 				<div className='flex items-center mb-1.5 text-sm text-gray-300'>
-					<CalendarTick size='1.25em' className='mr-2' />
+					<i className='ri-calendar-check-line ri-lg mr-2'></i>
 					{moment().format('D [Thg] M, YYYY')}
 					<div className='w-1 h-1 rounded-full bg-current mx-2' />
 					10 phút đọc

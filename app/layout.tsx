@@ -1,7 +1,8 @@
 import fonts from '@/configs/fonts'
-import type { Metadata } from 'next'
-import './globals.css'
 import moment from 'moment'
+import type { Metadata } from 'next'
+import 'remixicon/fonts/remixicon.css'
+import './globals.css'
 
 export const metadata: Metadata = {
 	title: '404Lab',

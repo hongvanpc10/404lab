@@ -1,7 +1,6 @@
+import routes from '@/configs/routes'
 import Link from 'next/link'
 import Logo from './logo'
-import routes from '@/configs/routes'
-import { Facebook, Global, Youtube } from 'iconsax-react'
 
 export default function Footer() {
 	return (
@@ -16,30 +15,34 @@ export default function Footer() {
 							<div className='h-[1px] ml-4 flex-1 bg-emerald-500' />
 						</div>
 
-						<div className='space-y-5 text-gray-400 text-[0.9375rem]'>
-							<Link href={routes.forum} className='flex items-center transition hover:text-emerald-500'>
-								<Global
-									size='1.25em'
-									variant='Bold'
-									className='mr-6'
-								/>
+						<div className='space-y-4 text-gray-400 text-[0.9375rem]'>
+							<Link
+								href={routes.forum}
+								className='flex items-center transition hover:text-emerald-500'
+							>
+								<i className='ri-honor-of-kings-fill ri-lg mr-3' />
 								Forum
 							</Link>
-							<Link href={''} className='flex items-center transition hover:text-emerald-500'>
-								<Facebook
-									size='1.25em'
-									variant='Bold'
-									className='mr-6'
-								/>
+							<Link
+								href={''}
+								className='flex items-center transition hover:text-emerald-500'
+							>
+								<i className='ri-facebook-box-fill ri-lg mr-3' />
 								Facebook
 							</Link>
-							<Link href={''} className='flex items-center transition hover:text-emerald-500'>
-								<Youtube
-									size='1.25em'
-									variant='Bold'
-									className='mr-6'
-								/>
-								Youtube
+							<Link
+								href={''}
+								className='flex items-center transition hover:text-emerald-500'
+							>
+								<i className='ri-linkedin-box-fill ri-lg mr-3' />
+								Linkedin
+							</Link>{' '}
+							<Link
+								href={''}
+								className='flex items-center transition hover:text-emerald-500'
+							>
+								<i className='ri-github-fill ri-lg mr-3' />
+								Github
 							</Link>
 						</div>
 					</section>

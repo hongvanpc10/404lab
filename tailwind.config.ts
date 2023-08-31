@@ -76,7 +76,7 @@ const config: Config = {
 					css: {
 						img: {
 							width: '100%',
-							borderRadius: '0.25rem'
+							borderRadius: '0.25rem',
 						},
 					},
 				},
@@ -89,6 +89,7 @@ const config: Config = {
 	plugins: [
 		require('@tailwindcss/aspect-ratio'),
 		require('@tailwindcss/typography'),
+		require('@headlessui/tailwindcss')({ prefix: 'ui' }),
 	],
 }
 export default config

@@ -1,5 +1,4 @@
 import { BlogCardHorizontal } from '@/components/blogCard'
-import { ArrowRight2, Edit } from 'iconsax-react'
 import Link from 'next/link'
 
 export default function BlogsByTag() {
@@ -8,7 +7,7 @@ export default function BlogsByTag() {
 			<div className='flex items-center justify-center flex-col py-14 bg-gray-900 rounded'>
 				<h1 className='text-3xl font-bold'>PYTHON</h1>
 				<div className='flex items-center mt-6 mb-4 text-gray-300'>
-					<Edit size='1.125rem' className='mr-2' />
+					<i className='ri-edit-box-line mr-2 ri-lg'></i>
 					15 bài viết
 				</div>
 				<p className=' text-gray-300'>
@@ -29,8 +28,12 @@ export default function BlogsByTag() {
 				<div></div>
 				<div className='flex justify-center text-lg'>Page 1 of 3</div>
 				<div className='flex justify-end'>
-					<Link href={''} className='flex items-center rounded text-sm bg-emerald-500 py-2 px-6 transition hover:bg-orange-800'>
-						Next <ArrowRight2 size='1em' className='ml-1' />
+					<Link
+						href={''}
+						className='flex items-center rounded text-sm bg-emerald-500 py-2 px-6 transition hover:bg-amber-600'
+					>
+						Next{' '}
+						<i className='ri-arrow-right-s-line ri-lg ml-1'></i>
 					</Link>
 				</div>
 			</div>

@@ -2,11 +2,12 @@
 
 import Logo from '@/components/logo'
 import routes from '@/configs/routes'
-import { Facebook, Instagram, Sun1, Youtube } from 'iconsax-react'
 import moment from 'moment'
 import 'moment/locale/vi'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import Image from './image'
+import Menu from './menu'
 import Search from './search'
 
 export default function Header() {
@@ -18,21 +19,9 @@ export default function Header() {
 				<div className='container max-w-6xl text-sm flex items-center justify-between'>
 					<div className='flex items-center'>
 						<div className=' flex items-center space-x-3 text-gray-600'>
-							<Facebook
-								size='1.5em'
-								variant='Bold'
-								className='hover:text-emerald-500 transition'
-							/>
-							<Instagram
-								size='1.5em'
-								variant='Bold'
-								className='hover:text-emerald-500 transition'
-							/>
-							<Youtube
-								size='1.5em'
-								variant='Bold'
-								className='hover:text-emerald-500 transition'
-							/>
+							<i className='hover:text-emerald-500 ri-facebook-box-fill ri-lg transition' />
+							<i className='hover:text-emerald-500 ri-linkedin-box-fill ri-lg transition' />
+							<i className='hover:text-emerald-500 ri-github-fill ri-lg transition' />
 						</div>
 
 						<div className='bg-emerald-500 ml-3 [clip-path:polygon(0_0,90%_0,100%_100%,10%_100%)] py-4 px-8'>
@@ -63,6 +52,25 @@ export default function Header() {
 						>
 							Đăng kí
 						</Link>
+
+						<Menu
+							items={[
+								{ label: 'Tài khoản của tôi' },
+								{ label: 'Bài viết của tôi' },
+								{ label: 'Đăng xuất' },
+							]}
+						>
+							<button className='flex items-center'>
+								<Image
+									alt=''
+									src='https://i.pinimg.com/550x/17/00/49/170049bff33ceaa7195ad7f31b58b039.jpg'
+									className='h-5 w-5 rounded-full mr-2'
+								/>
+								<h2 className='text-emerald-500 text-[0.9375rem]'>
+									Hong Van
+								</h2>
+							</button>
+						</Menu>
 					</nav>
 				</div>
 			</div>
@@ -75,8 +83,15 @@ export default function Header() {
 						<Search />
 
 						<button className='ml-7'>
-							<Sun1 size='1.5em' />
+							<i className='ri-sun-line ri-xl'></i>
 						</button>
+
+						<Link
+							href={routes.newBlog}
+							className='text-white ml-7 bg-emerald-500 w-9 h-9 transition hover:bg-amber-600 flex items-center justify-center rounded-full'
+						>
+							<i className='ri-edit-box-line'></i>
+						</Link>
 					</div>
 				</div>
 			</div>

@@ -1,7 +1,6 @@
-import { CalendarTick } from 'iconsax-react'
-import Image from '../image'
 import moment from 'moment'
 import Link from 'next/link'
+import Image from '../image'
 
 export default function BlogCard() {
 	return (
@@ -19,7 +18,7 @@ export default function BlogCard() {
 				</Link>
 			</h3>
 			<div className='flex items-center mb-2 text-sm text-gray-300'>
-				<CalendarTick size='1.25em' className='mr-2' />
+				<i className='ri-calendar-check-line ri-lg mr-2'></i>
 				{moment().format('D [Thg] M, YYYY')}
 				<div className='w-1 h-1 rounded-full bg-current mx-2' />
 				10 phút đọc

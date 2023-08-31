@@ -28,10 +28,7 @@ export default function Title({ children, href, className }: Props) {
 					className='flex group text-sm transition hover:text-emerald-500 items-center'
 				>
 					TẤT CẢ
-					<ArrowRight
-						className='ml-2 transition-[margin] group-hover:mr-0 mr-2 group-hover:ml-4'
-						size='1.25em'
-					/>
+					<i className='ml-2 ri-arrow-right-line ri-lg transition-[margin] group-hover:mr-0 mr-2 group-hover:ml-4' />
 				</Link>
 			)}
 		</div>
