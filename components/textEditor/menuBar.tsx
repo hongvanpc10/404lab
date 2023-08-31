@@ -52,7 +52,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 	if (!editor) return
 
 	return (
-		<div className='space-x-2 flex sticky top-0 z-10 bg-gray-900 rounded-t-xl p-2'>
+		<div className='space-x-2 flex sticky top-0 z-10 bg-gray-900 rounded-t-lg p-2'>
 			<button
 				type='button'
 				onClick={() => editor.chain().focus().toggleBold().run()}

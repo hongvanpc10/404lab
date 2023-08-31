@@ -40,7 +40,7 @@ export default function TextEditor() {
 		],
 		editorProps: {
 			attributes: {
-				class: 'prose prose-emerald bg-gray-900/50 outline-none p-5 rounded-b-lx min-h-[25rem] max-w-none',
+				class: 'prose prose-emerald bg-gray-900/50 outline-none p-5 rounded-b-lg min-h-[25rem] max-w-none',
 			},
 		},
 	})
