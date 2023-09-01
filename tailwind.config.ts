@@ -76,7 +76,6 @@ const config: Config = {
 					css: {
 						img: {
 							width: '100%',
-							borderRadius: '0.25rem',
 						},
 					},
 				},
