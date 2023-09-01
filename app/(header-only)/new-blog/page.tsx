@@ -18,7 +18,7 @@ export default function NewBlog() {
 				Chia sẻ ý tưởng, kiến thức, kinh nghiệm của bạn cho mọi người
 			</p>
 
-			<form className='w-full space-y-6'>
+			<form className='w-full space-y-10'>
 				<div>
 					<label className='text-lg mb-2 inline-block'>Tiêu đề</label>
 					<Input placeholder='Nhập tiêu đề bài viết' autoFocus />
