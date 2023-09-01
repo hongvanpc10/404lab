@@ -8,13 +8,13 @@ export default function BlogCard() {
 			<Link href={'/regferg'}>
 				<Image
 					alt=''
-					src='https://statics.cdn.200lab.io/2023/08/nextjs_thumbnail.png?auto=format,compress&width=1500'
+					src='https://statics.cdn.200lab.io/2023/05/Thumbnails-Blog--1200---628-px---9-.jpg?auto=format,compress&width=1500'
 					className='aspect-w-16 aspect-h-10'
 				/>
 			</Link>
 			<h3 className='mt-2 mb-1.5 text-lg font-medium transition hover:text-emerald-500'>
 				<Link href={'/ergerg'} className='line-clamp-2'>
-					NextJS là gì? Mọi thứ bạn cần biết về NextJS
+					BOOTSTRAP LÀ GÌ? HƯỚNG DẪN DOWNLOAD VÀ CÀI ĐẶT BOOTSTRAP
 				</Link>
 			</h3>
 			<div className='flex items-center mb-2 text-sm text-gray-300'>
