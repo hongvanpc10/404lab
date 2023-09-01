@@ -45,16 +45,16 @@ export default function BlogDetail() {
 			<div className='flex items-center mt-6 mb-10'>
 				<span className='text-gray-400 mr-4'>Chia sẻ bài viết:</span>
 				<div className='flex items-center space-x-3'>
-					<button className='bg-blue-500 rounded-tr-xl rounded-bl-xl hover:brightness-75 transition py-2 px-1.5'>
+					<button className='bg-blue-500 rounded-tr-xl rounded-bl-xl hover:brightness-75 transition py-1.5 px-1.5'>
 						<i className='ri-facebook-fill'></i>
 					</button>
-					<button className='bg-purple-500 rounded-tr-xl rounded-bl-xl hover:brightness-75 transition py-2 px-1.5'>
+					<button className='bg-purple-500 rounded-tr-xl rounded-bl-xl hover:brightness-75 transition py-1.5 px-1.5'>
 						<i className='ri-github-fill'></i>
 					</button>
-					<button className='bg-gray-500 rounded-tr-xl rounded-bl-xl hover:brightness-75 transition py-2 px-1.5'>
+					<button className='bg-gray-500 rounded-tr-xl rounded-bl-xl hover:brightness-75 transition py-1.5 px-1.5'>
 						<i className='ri-linkedin-fill'></i>
 					</button>
-					<button className='bg-rose-500 rounded-tr-xl rounded-bl-xl hover:brightness-75 transition py-2 px-1.5'>
+					<button className='bg-rose-500 rounded-tr-xl rounded-bl-xl hover:brightness-75 transition py-1.5 px-1.5'>
 						<i className='ri-file-copy-line'></i>
 					</button>
 				</div>
