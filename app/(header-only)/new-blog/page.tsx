@@ -59,6 +59,7 @@ export default function NewBlog() {
 						<div className='flex'>
 							<Input
 								type='url'
+								autoFocus
 								placeholder='Nhập url hình ảnh thumbnail'
 							/>
 							<button
