@@ -1,6 +1,5 @@
-import { Fragment, MouseEventHandler, ReactElement } from 'react'
 import { Popover as BasePopover, Transition } from '@headlessui/react'
-import Link from 'next/link'
+import { ReactElement } from 'react'
 
 interface Props {
 	children?: ReactElement
@@ -22,7 +21,7 @@ export default function Popover({ children, render }: Props) {
 				leaveFrom='transform translate-y-0 opacity-100'
 				leaveTo='transform -translate-y-3 opacity-0'
 			>
-				<BasePopover.Panel className='absolute outline-none top-[calc(100%+.5rem)] flex rounded shadow-xl shadow-gray-500/5 flex-col min-w-[12rem] right-0 bg-gray-900'>
+				<BasePopover.Panel className='absolute outline-none top-[calc(100%+.5rem)] flex shadow-xl shadow-gray-500/5 flex-col min-w-[12rem] right-0 bg-gray-900'>
 					{render}
 				</BasePopover.Panel>
 			</Transition>

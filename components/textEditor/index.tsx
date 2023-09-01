@@ -8,29 +8,16 @@ import Table from '@tiptap/extension-table'
 import TableCell from '@tiptap/extension-table-cell'
 import TableHeader from '@tiptap/extension-table-header'
 import TableRow from '@tiptap/extension-table-row'
+import Underline from '@tiptap/extension-underline'
 import { EditorContent, useEditor } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
-import css from 'highlight.js/lib/languages/css'
-import js from 'highlight.js/lib/languages/javascript'
-import py from 'highlight.js/lib/languages/python'
-import ts from 'highlight.js/lib/languages/typescript'
-import html from 'highlight.js/lib/languages/xml'
-import bash from 'highlight.js/lib/languages/bash'
 import { lowlight } from 'lowlight'
 import MenuBar from './menuBar'
-import Underline from '@tiptap/extension-underline'
-
-lowlight.registerLanguage('html', html)
-lowlight.registerLanguage('css', css)
-lowlight.registerLanguage('js', js)
-lowlight.registerLanguage('py', py)
-lowlight.registerLanguage('ts', ts)
-lowlight.registerLanguage('bash', bash)
 
 export default function TextEditor() {
 	const editor = useEditor({
 		extensions: [
-			StarterKit,
+			StarterKit.configure({ codeBlock: false }),
 			Highlight,
 			CodeBlockLowlight.configure({ lowlight }),
 			Image,
@@ -43,8 +30,12 @@ export default function TextEditor() {
 		],
 		editorProps: {
 			attributes: {
-				class: 'prose prose-emerald bg-gray-900/50 outline-none p-5 rounded-b-lg min-h-[25rem] max-w-none',
+				class: 'prose prose-emerald bg-gray-900/50 outline-none p-5 min-h-[25rem] max-w-none',
 			},
+		},
+		content: '<p>Nhập nội dung của bạn tại đây.</p>',
+		onUpdate: ({ editor }) => {
+			console.log(editor.getHTML())
 		},
 	})
 

@@ -12,7 +12,7 @@ export default function FeaturedBlogCard({ className }: Props) {
 			<Image
 				alt=''
 				src='https://statics.cdn.200lab.io/2022/11/web-development-la--gi--.png'
-				className='aspect-w-16 h-full aspect-h-10 rounded-sm'
+				className='aspect-w-16 h-full aspect-h-10'
 			/>
 			<Link href={''}>
 				<div className='bg-gradient-to-t from-black/80 to-transparent absolute inset-0' />

@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function BlogsByTag() {
 	return (
 		<div className='max-w-3xl mx-auto'>
-			<div className='flex items-center justify-center flex-col py-14 bg-gray-900 rounded'>
+			<div className='flex items-center justify-center flex-col py-14 bg-gray-900'>
 				<h1 className='text-3xl font-bold'>PYTHON</h1>
 				<div className='flex items-center mt-6 mb-4 text-gray-300'>
 					<i className='ri-edit-box-line mr-2 ri-lg'></i>
@@ -30,7 +30,7 @@ export default function BlogsByTag() {
 				<div className='flex justify-end'>
 					<Link
 						href={''}
-						className='flex items-center rounded text-sm bg-emerald-500 py-2 px-6 transition hover:bg-amber-600'
+						className='flex items-center text-sm bg-emerald-500 py-2 px-6 transition hover:bg-amber-600'
 					>
 						Next{' '}
 						<i className='ri-arrow-right-s-line ri-lg ml-1'></i>

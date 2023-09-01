@@ -72,7 +72,7 @@ export default function Footer() {
 								<Link
 									key={index}
 									href={''}
-									className='py-2 px-3 transition hover:bg-emerald-500 hover:text-white rounded text-sm bg-gray-800 text-gray-400 mr-2 mb-2'
+									className='py-1.5 px-3 transition hover:bg-emerald-500 hover:text-white text-sm bg-gray-800 text-gray-400 mr-2 mb-2'
 								>
 									{tag
 										.split('')

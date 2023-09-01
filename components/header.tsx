@@ -90,7 +90,7 @@ export default function Header() {
 							href={routes.newBlog}
 							className='text-white ml-7 bg-emerald-500 w-9 h-9 transition hover:bg-amber-600 flex items-center justify-center rounded-full'
 						>
-							<i className='ri-edit-box-line'></i>
+							<i className='ri-edit-box-line ri-lg'></i>
 						</Link>
 					</div>
 				</div>

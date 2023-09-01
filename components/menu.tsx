@@ -28,7 +28,7 @@ export default function Menu({ children, items }: Props) {
 				leaveFrom='transform translate-y-0 opacity-100'
 				leaveTo='transform -translate-y-3 opacity-0'
 			>
-				<BaseMenu.Items className='absolute outline-none top-[calc(100%+.5rem)] flex rounded shadow-xl shadow-gray-500/5 flex-col min-w-[12rem] right-0 bg-gray-900'>
+				<BaseMenu.Items className='absolute outline-none top-[calc(100%+.5rem)] flex shadow-xl shadow-gray-500/5 flex-col min-w-[12rem] right-0 bg-gray-900'>
 					{items.map(({ label, href, onClick }, index) => {
 						const Comp = href ? Link : 'button'
 

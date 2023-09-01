@@ -52,11 +52,11 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 	if (!editor) return
 
 	return (
-		<div className='space-x-2 flex sticky top-0 z-10 bg-gray-900 rounded-t-lg p-2'>
+		<div className='space-x-2 flex sticky top-0 z-10 bg-gray-900 p-2.5'>
 			<button
 				type='button'
 				onClick={() => editor.chain().focus().toggleBold().run()}
-				className={`flex items-center transition justify-center w-7 h-7 rounded text-gray-400 ${
+				className={`flex items-center transition justify-center w-7 h-7 text-gray-400 ${
 					editor.isActive('bold')
 						? 'text-white bg-emerald-500'
 						: 'hover:text-emerald-500'
@@ -67,7 +67,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			<button
 				type='button'
 				onClick={() => editor.chain().focus().toggleItalic().run()}
-				className={`flex items-center transition justify-center w-7 h-7 rounded text-gray-400 ${
+				className={`flex items-center transition justify-center w-7 h-7 text-gray-400 ${
 					editor.isActive('italic')
 						? 'text-white bg-emerald-500'
 						: 'hover:text-emerald-500'
@@ -78,18 +78,18 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			<button
 				type='button'
 				onClick={() => editor.chain().focus().toggleUnderline().run()}
-				className={`flex items-center transition justify-center w-7 h-7 rounded text-gray-400 ${
+				className={`flex items-center transition justify-center w-7 h-7 text-gray-400 ${
 					editor.isActive('underline')
 						? 'text-white bg-emerald-500'
 						: 'hover:text-emerald-500'
 				}`}
 			>
 				<i className={`ri-underline ri-lg`}></i>
-			</button>{' '}
+			</button>
 			<button
 				type='button'
 				onClick={() => editor.chain().focus().toggleStrike().run()}
-				className={`flex items-center transition justify-center w-7 h-7 rounded text-gray-400 ${
+				className={`flex items-center transition justify-center w-7 h-7 text-gray-400 ${
 					editor.isActive('strike')
 						? 'text-white bg-emerald-500'
 						: 'hover:text-emerald-500'
@@ -100,7 +100,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			<button
 				type='button'
 				onClick={() => editor.chain().focus().toggleCode().run()}
-				className={`flex items-center transition justify-center w-7 h-7 rounded text-gray-400 ${
+				className={`flex items-center transition justify-center w-7 h-7 text-gray-400 ${
 					editor.isActive('code')
 						? 'text-white bg-emerald-500'
 						: 'hover:text-emerald-500'
@@ -111,7 +111,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			<button
 				type='button'
 				onClick={() => editor.chain().focus().toggleHighlight().run()}
-				className={`flex items-center transition justify-center w-7 h-7 rounded text-gray-400 ${
+				className={`flex items-center transition justify-center w-7 h-7 text-gray-400 ${
 					editor.isActive('highlight')
 						? 'text-white bg-emerald-500'
 						: 'hover:text-emerald-500'
@@ -124,7 +124,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 				onClick={() =>
 					editor.chain().focus().toggleHeading({ level: 2 }).run()
 				}
-				className={`flex items-center transition justify-center w-7 h-7 rounded text-gray-400 ${
+				className={`flex items-center transition justify-center w-7 h-7 text-gray-400 ${
 					editor.isActive('heading', { level: 2 })
 						? 'text-white bg-emerald-500'
 						: 'hover:text-emerald-500'
@@ -137,7 +137,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 				onClick={() =>
 					editor.chain().focus().toggleHeading({ level: 3 }).run()
 				}
-				className={`flex items-center transition justify-center w-7 h-7 rounded text-gray-400 ${
+				className={`flex items-center transition justify-center w-7 h-7 text-gray-400 ${
 					editor.isActive('heading', { level: 3 })
 						? 'text-white bg-emerald-500'
 						: 'hover:text-emerald-500'
@@ -150,7 +150,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 				onClick={() =>
 					editor.chain().focus().toggleHeading({ level: 4 }).run()
 				}
-				className={`flex items-center transition justify-center w-7 h-7 rounded text-gray-400 ${
+				className={`flex items-center transition justify-center w-7 h-7 text-gray-400 ${
 					editor.isActive('heading', { level: 4 })
 						? 'text-white bg-emerald-500'
 						: 'hover:text-emerald-500'
@@ -161,7 +161,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			<button
 				type='button'
 				onClick={() => editor.chain().focus().setParagraph().run()}
-				className={`flex items-center transition justify-center w-7 h-7 rounded text-gray-400 ${
+				className={`flex items-center transition justify-center w-7 h-7 text-gray-400 ${
 					editor.isActive('paragraph')
 						? 'text-white bg-emerald-500'
 						: 'hover:text-emerald-500'
@@ -172,7 +172,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			<button
 				type='button'
 				onClick={() => editor.chain().focus().toggleBulletList().run()}
-				className={`flex items-center transition justify-center w-7 h-7 rounded text-gray-400 ${
+				className={`flex items-center transition justify-center w-7 h-7 text-gray-400 ${
 					editor.isActive('bulletList')
 						? 'text-white bg-emerald-500'
 						: 'hover:text-emerald-500'
@@ -183,7 +183,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			<button
 				type='button'
 				onClick={() => editor.chain().focus().toggleOrderedList().run()}
-				className={`flex items-center transition justify-center w-7 h-7 rounded text-gray-400 ${
+				className={`flex items-center transition justify-center w-7 h-7 text-gray-400 ${
 					editor.isActive('orderedList')
 						? 'text-white bg-emerald-500'
 						: 'hover:text-emerald-500'
@@ -194,7 +194,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			<button
 				type='button'
 				onClick={() => editor.chain().focus().toggleCodeBlock().run()}
-				className={`flex items-center transition justify-center w-7 h-7 rounded text-gray-400 ${
+				className={`flex items-center transition justify-center w-7 h-7 text-gray-400 ${
 					editor.isActive('codeBlock')
 						? 'text-white bg-emerald-500'
 						: 'hover:text-emerald-500'
@@ -205,7 +205,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			<button
 				type='button'
 				onClick={() => editor.chain().focus().toggleBlockquote().run()}
-				className={`flex items-center transition justify-center w-7 h-7 rounded text-gray-400 ${
+				className={`flex items-center transition justify-center w-7 h-7 text-gray-400 ${
 					editor.isActive('blockquote')
 						? 'text-white bg-emerald-500'
 						: 'hover:text-emerald-500'
@@ -216,7 +216,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			<button
 				type='button'
 				onClick={() => editor.chain().focus().setHardBreak().run()}
-				className={`flex items-center transition justify-center w-7 h-7 rounded text-gray-400 ${
+				className={`flex items-center transition justify-center w-7 h-7 text-gray-400 ${
 					editor.isActive('harkBreak')
 						? 'text-white bg-emerald-500'
 						: 'hover:text-emerald-500'
@@ -246,7 +246,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			>
 				<button
 					type='button'
-					className={`flex items-center transition justify-center w-7 h-7 rounded text-gray-400 ${
+					className={`flex items-center transition justify-center w-7 h-7 text-gray-400 ${
 						editor.isActive('image')
 							? 'text-white bg-emerald-500'
 							: 'hover:text-emerald-500'
@@ -277,7 +277,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			>
 				<button
 					type='button'
-					className={`flex items-center transition justify-center w-7 h-7 rounded text-gray-400 ${
+					className={`flex items-center transition justify-center w-7 h-7 text-gray-400 ${
 						editor.isActive('link')
 							? 'text-white bg-emerald-500'
 							: 'hover:text-emerald-500'
@@ -332,7 +332,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 				<button
 					type='button'
 					onClick={() => editor.chain().focus().redo().run()}
-					className={`flex items-center transition justify-center w-7 h-7 rounded text-gray-400 ${
+					className={`flex items-center transition justify-center w-7 h-7 text-gray-400 ${
 						editor.isActive('table')
 							? 'text-white bg-emerald-500'
 							: 'hover:text-emerald-500'
@@ -344,7 +344,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			<button
 				type='button'
 				onClick={() => editor.chain().focus().setHorizontalRule().run()}
-				className={`flex items-center transition justify-center w-7 h-7 rounded text-gray-400 ${
+				className={`flex items-center transition justify-center w-7 h-7 text-gray-400 ${
 					editor.isActive('horizontalRule')
 						? 'text-white bg-emerald-500'
 						: 'hover:text-emerald-500'
@@ -357,7 +357,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 				onClick={() =>
 					editor.chain().focus().clearNodes().unsetAllMarks().run()
 				}
-				className={`flex items-center transition justify-center w-7 h-7 rounded text-gray-400 ${
+				className={`flex items-center transition justify-center w-7 h-7 text-gray-400 ${
 					editor.isActive('clearMarks')
 						? 'text-white bg-emerald-500'
 						: 'hover:text-emerald-500'
@@ -368,7 +368,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			<button
 				type='button'
 				onClick={() => editor.chain().focus().undo().run()}
-				className={`flex items-center transition justify-center w-7 h-7 rounded text-gray-400 ${
+				className={`flex items-center transition justify-center w-7 h-7 text-gray-400 ${
 					editor.isActive('undo')
 						? 'text-white bg-emerald-500'
 						: 'hover:text-emerald-500'
@@ -379,7 +379,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			<button
 				type='button'
 				onClick={() => editor.chain().focus().redo().run()}
-				className={`flex items-center transition justify-center w-7 h-7 rounded text-gray-400 ${
+				className={`flex items-center transition justify-center w-7 h-7 text-gray-400 ${
 					editor.isActive('redo')
 						? 'text-white bg-emerald-500'
 						: 'hover:text-emerald-500'

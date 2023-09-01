@@ -9,7 +9,7 @@ export default function BlogCard() {
 				<Image
 					alt=''
 					src='https://statics.cdn.200lab.io/2022/11/web-development-la--gi--.png'
-					className='aspect-w-16 aspect-h-10 rounded-sm'
+					className='aspect-w-16 aspect-h-10'
 				/>
 			</Link>
 			<h3 className='mt-2 mb-1.5 text-lg font-medium transition hover:text-emerald-500'>

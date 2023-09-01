@@ -4,7 +4,7 @@ import Image from '../image'
 
 export default function BlogCardHorizontal() {
 	return (
-		<div className='grid grid-cols-5 bg-gray-900 p-4 gap-4 rounded'>
+		<div className='grid grid-cols-5 bg-gray-900 p-4 gap-4'>
 			<div className='col-span-3'>
 				<h3 className='mb-2 text-lg font-medium transition hover:text-emerald-500'>
 					<Link href={''} className='line-clamp-2'>
@@ -40,7 +40,7 @@ export default function BlogCardHorizontal() {
 				<Image
 					alt=''
 					src='https://statics.cdn.200lab.io/2022/11/web-development-la--gi--.png'
-					className='aspect-w-16 aspect-h-10 rounded-sm'
+					className='aspect-w-16 aspect-h-10'
 				/>
 			</Link>
 		</div>

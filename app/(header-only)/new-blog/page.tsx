@@ -1,8 +1,14 @@
+'use client'
+
 import Input from '@/components/input'
+import Checkbox from '@/components/checkbox'
 import TextEditor from '@/components/textEditor'
 import Textarea from '@/components/textarea'
+import { useState } from 'react'
 
 export default function NewBlog() {
+	const [imageType, setImageType] = useState(0)
+
 	return (
 		<div className='flex flex-col items-center mx-auto max-w-5xl'>
 			<h1 className='text-3xl mb-4 font-bold'>
@@ -25,16 +31,59 @@ export default function NewBlog() {
 							(Optional)
 						</small>
 					</label>
-					<Textarea
-						rows={4}
-						placeholder='Nhập tiêu đề bài viết'
-						autoFocus
-					/>
+					<Textarea rows={4} placeholder='Nhập mô tả bài viết' />
+				</div>
+
+				<div>
+					<div className='flex items-center mb-6'>
+						<label className='text-lg inline-block'>Hình ảnh</label>
+						<div className='flex items-center ml-10 space-x-2 text-gray-400 text-sm'>
+							<Checkbox
+								value={0}
+								name='imageType'
+								checked={!imageType}
+								onChange={() => setImageType(0)}
+							/>
+							<span className='ml-2'>Tải lên</span>
+							<Checkbox
+								value={1}
+								name='imageType'
+								checked={imageType === 1}
+								onChange={() => setImageType(1)}
+							/>
+							<span className='ml-2'>Url</span>
+						</div>
+					</div>
+
+					{imageType ? (
+						<div className='flex'>
+							<Input
+								type='url'
+								placeholder='Nhập url hình ảnh thumbnail'
+							/>
+							<button
+								type='button'
+								className='text-emerald-500 whitespace-nowrap py-2 px-4'
+							>
+								Load
+							</button>
+						</div>
+					) : (
+						<>
+							<input type='file' hidden id='thumbnail' />
+							<label
+								htmlFor='thumbnail'
+								className='py-2 px-6 bg-emerald-500'
+							>
+								Tải lên
+							</label>
+						</>
+					)}
 				</div>
 
 				<div>
 					<label className='text-lg mb-2 inline-block'>
-						Nội dụng
+						Nội dung
 					</label>
 					<TextEditor />
 				</div>

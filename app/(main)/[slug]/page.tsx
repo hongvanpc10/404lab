@@ -1,5 +1,6 @@
 import { BlogCardHorizontal } from '@/components/blogCard'
 import Image from '@/components/image'
+import Textarea from '@/components/textarea'
 import Title from '@/components/title'
 import routes from '@/configs/routes'
 import moment from 'moment'
@@ -61,325 +62,638 @@ export default function BlogDetail() {
 			<Image
 				alt=''
 				src='https://statics.cdn.200lab.io/2022/11/web-development-la--gi--.png'
-				className='aspect-w-16 aspect-h-9 rounded'
+				className='aspect-w-16 aspect-h-9'
 			/>
 
 			<div className='flex mt-10'>
 				<div className='prose mr-6 w-9/12 prose-lg prose-emerald max-w-none'>
-					<p>
-						<strong>Bắt đầu với ngành lập</strong> trình thường rất
-						dễ dàng, nhưng bạn cần nhiều hơn nữa để nâng cấp bản
-						thân cũng như trình độ của bạn.
-					</p>
-					<p>
-						Lập trình viên là người thiết kế và phát triển hệ thống
-						phần mềm. Ngành lập trình là ngành có rất nhiều lĩnh vực
-						bao gồm:{' '}
-						<a href='https://200lab.io/blog/front-end-la-gi/'>
-							Frontend
-						</a>
-						,{' '}
-						<a href='https://200lab.io/blog/backend-la-gi/'>
-							Backend
-						</a>
-						, Full-stack, hệ thống nhúng, v.v. Các lập trình viên
-						thường làm việc với nhiều loại ngôn ngữ lập trình khác
-						nhau. Chuyên môn của mỗi lập trình viên phụ thuộc vào kỹ
-						năng của họ.
-					</p>
-					<p>
-						Vì vậy, họ luôn cố gắng nâng cao kỹ năng của mình bằng
-						cách thực hiện nhiều hoạt động khác nhau. Hiện nay có
-						rất nhiều cách độc đáo để nâng cao kỹ năng của lập trình
-						viên dựa trên từng lĩnh vực.{' '}
-					</p>
-					<p>
-						Ví dụ: thực hành xử lý CSS sẽ rất tốt nếu bạn đang phát
-						triển Frontend. Tuy nhiên, những nghề nghiệp lập trình
-						khác nhau này có một quy trình chung được gọi là
-						<a href='https://en.wikipedia.org/wiki/Systems_development_life_cycle'>
-							{' '}
-							Vòng đời phát triển phần mềm
-						</a>
-						.
-					</p>
-					<h2 id='1-vi-t-code-clean-d-c-v-ch-t-l-ng-cao'>
-						1. Viết code clean, dễ đọc và chất lượng cao
-					</h2>
-					<p>
-						<img
-							src='https://statics.cdn.200lab.io/2023/06/5-cach-cai-thien-ky-nang-lap-trinh.jpeg'
-							alt=''
-						/>
-					</p>
-					<p>Viết code clean, dễ đọc và chất lượng cao</p>
-					<p>
-						Là lập trình viên, chúng ta thường xuyên viết code. Các
-						lập trình viên thường thêm, xóa hoặc sửa đổi các dòng
-						code trong các dự án codebase của họ. Những sửa đổi
-						source code đó cải thiện hoặc làm xấu đi codebase.{' '}
-					</p>
-					<p>
-						Họ luôn cần cải thiện codebase của mình với những dòng
-						code chất lượng, không có lỗi. Không nghi ngờ gì nữa,
-						việc làm theo một hướng dẫn về cách code rõ ràng là điều
-						bắt buộc. Nếu dự án của bạn vẫn không có hướng dẫn về
-						cách viết code, bạn có thể đề xuất.
-					</p>
-					<p>
-						Phát triển phần mềm là một hoạt động hợp tác khi làm
-						việc nhóm chung với rất nhiều người khác. Nhiều lập
-						trình viên thường cộng tác làm việc trên cùng một đoạn
-						code. Một số lập trình viên có thể nhanh chóng áp dụng
-						các patch cho các source code phức tạp do người khác
-						viết. Mặt khác, một số lập trình viên phải vật lộn với
-						các source code phức tạp.
-					</p>
-					<p>
-						Do đó, bạn luôn cần phải viết code tự giải thích ngay cả
-						khi bạn đang triển khai một logic hoàn toàn phức tạp.
-						Các mẫu thiết kế chính xác, cấu trúc thư mục, phân tách
-						mô-đun giúp chúng ta viết code sạch.{' '}
-					</p>
-					<blockquote>
+					<>
 						<p>
-							Ví dụ: xem cách nhóm Chromium tổ chức bộ điều khiển
-							UI của trình duyệt để giảm độ phức tạp.
+							Trong quá trình làm việc với Git, các lập trình viên
+							thường làm việc độc lập trên các nhánh (branch) khác
+							nhau và để thống nhất code sau khi phát triển tính
+							năng hoặc vá lỗi, cần tiến hành hợp nhất nhánh.
 						</p>
-					</blockquote>
-					<p>
-						<img
-							src='https://statics.cdn.200lab.io/2021/07/1-Q7vyGwLVumx_ounzHyUx3Q.png'
-							alt=''
-						/>
-					</p>
-					<p>
-						Các phần tử UI được tổ chức tốt trong source Chromium.
-					</p>
-					<h2 id='2-u-ti-n-performance-ng-d-ng'>
-						2. Ưu tiên Performance ứng dụng
-					</h2>
-					<p>
-						<img
-							src='https://statics.cdn.200lab.io/2023/06/5-cach-cai-thien-ky-nang-lap-trinh.jpg'
-							alt=''
-						/>
-					</p>
-					<p>Ưu tiên performance ứng dụng</p>
-					<p>
-						Lập trình viên phải viết code tốt hơn để gây ấn tượng
-						(impress) với phần cứng (hardware) và các lập trình viên
-						khác bằng cách viết code clean. Chúng ta phải viết code
-						hoạt động tốt với thời gian và không gian để impress với
-						hardware. Có nhiều cách khác nhau để giải quyết cùng một
-						vấn đề kỹ thuật phần mềm.{' '}
-					</p>
-					<p>
-						Cách thức ưu tiên hiệu năng thúc đẩy bạn chọn giải pháp
-						thiết thực và hiệu quả nhất. Hiệu năng vẫn là yếu tố
-						quan trọng bất kể đó là cá modern hardware vì các vấn đề
-						hiệu năng nhỏ tích lũy dần có thể ảnh hưởng xấu đến toàn
-						bộ hệ thống phần mềm trong tương lai.
-					</p>
-					<p>
-						Việc đưa ra các giải pháp cho hardware đòi hỏi kiến
-						​​thức cơ bản về khoa học máy tính. Lý do là các nguyên
-						tắc cơ bản về khoa học máy tính dạy chúng ta về cách sử
-						dụng các cấu trúc dữ liệu và thuật toán phù hợp. Lựa
-						chọn cấu trúc dữ liệu và thuật toán phù hợp là chìa khóa
-						thành công cho mọi dự án kỹ thuật phần mềm phức tạp.{' '}
-					</p>
-					<p>
-						Một số vấn đề về hiệu năng có thể ẩn trong codebase. Bên
-						cạnh đó, các test case hiệu năng của bạn có thể không
-						bao gồm các trường hợp đó. Mục tiêu của bạn phải là áp
-						dụng các patch hiệu năng khi bạn phát hiện ra vấn đề như
-						vậy.‌‌
-					</p>
-					<blockquote>
 						<p>
-							Ví dụ: 200Lab đã tìm thấy patch hiệu năng sau đây từ
-							source code của Git trên GitHub.
+							Hiện nay, khi cần tích hợp code từ nhánh này sang
+							nhánh khác, Git hỗ trợ hai tập lệnh cho cùng một mục
+							đích kết hợp công việc của nhiều nhà phát triển
+							thành một mã, tuy nhiên với hai cách tiếp cận hoàn
+							toàn khác nhau: <code>Git Merge</code> và{' '}
+							<code>Git Rebase</code>.
 						</p>
-					</blockquote>
-					<p>
+						<p>
+							Trong bài viết này, chúng ta sẽ tiến hành phân tích
+							cơ chế hoạt động, so sánh ưu nhược điểm giữa{' '}
+							<code>Merge</code>và <code>Rebase</code>, từ đó có
+							được góc nhìn đúng đắn về lợi ích cũng như nhìn ra
+							những rủi ro trong quá trình áp dụng thực tế vào
+							những tình huống cụ thể khác nhau.
+						</p>
+						<h2>
+							<strong>1. Git Merge là gì?</strong>
+						</h2>
+						<p>
+							Bắt đầu với quy trình làm việc phổ biến nhất mà hầu
+							hết chúng ta đã quá quen sử dụng để tích hợp các
+							thay đổi trong quá trình hợp nhất nhánh:{' '}
+							<code>Git Merge</code>.
+						</p>
+						<p>
+							Đặt bối cảnh muốn hợp nhất nhánh{' '}
+							<code>feature</code> vào nhánh <code>main</code>,
+							chúng ta thực hiện hợp nhất nhánh bằng{' '}
+							<code>git merge</code> thông qua các dòng lệnh đơn
+							giản sau đây
+						</p>
+						<pre>
+							<code>
+								git checkout feature{'\n'}git merge main
+							</code>
+						</pre>
+						<p>
+							Kết quả sau khi thực thi là <code>git merge</code>{' '}
+							tạo ra một commit mới ngay trên nhánh{' '}
+							<code>main</code>, commit này gắn kết lịch sử của cả
+							hai nhánh <code>main</code> và <code>feature</code>{' '}
+							&nbsp;như một quan hệ của sự hợp nhất.
+						</p>
+						<p>
+							Merge là một hình thức hợp nhất dễ dàng, an toàn và
+							tương đối dễ chịu. Các nhánh hiện có hoàn toàn không
+							được thay đổi trạng thái lịch sử các commit dưới bất
+							kỳ hình thức nào. Điều này tránh được tất cả những
+							cạm bẫy tiềm ẩn của việc tái xây dựng (rebase) lịch
+							sử commit.
+						</p>
+						<p>
+							Nếu nhánh <code>main</code> hoạt động rất tích cực,
+							điều này có thể làm rối lịch sử commit của nhánh{' '}
+							<code>feature</code> khá nhiều. Mặc dù có thể giảm
+							thiểu vấn đề này bằng các tùy chọn git log nâng cao
+							nhưng nó có thể khiến các nhà phát triển khác khó
+							hiểu được lịch sử của dự án.
+						</p>
+						<p>
+							Hình bên dưới là kết quả cuối cùng từ hành động hợp
+							nhất. Như bạn có thể thấy, lịch sử phát triển tính
+							năng trên nhánh <code>feature</code> vẫn được giữ
+							nguyên như cũ, chỉ thêm C7.
+						</p>
 						<img
-							src='https://statics.cdn.200lab.io/2021/07/1-gMly6VGbplcjUrJQob3t6Q.png'
+							src='https://statics.cdn.200lab.io/2023/08/Untitled-1.png'
 							alt=''
 						/>
-					</p>
-					<p>Patch hiệu năng từ source code của Git</p>
-					<h2 id='-3-am-hi-u-v-l-nh-v-c-m-b-n-ang-l-m-vi-c'>
-						‌3. Am hiểu về lĩnh vực mà bạn đang làm việc
-					</h2>
-					<p>
+						<p>
+							Bằng cách hợp nhất các thay đổi từ “main” thành
+							“feature-2”, lịch sử được giữ nguyên như những gì đã
+							xảy ra và chỉ có commit hợp nhất “C7” được đưa vào.
+						</p>
+						<p>
+							Nói một cách dễ hiểu, git <code>Merge</code> sẽ hợp
+							nhất nhiều lịch sử các cây commits tạo thành một
+							commit mới đại diện cho sự hợp nhất và giữ nguyên
+							các trạng thái lịch sử commit cùng tồn tại song song
+							trên các nhánh khác nhau.
+						</p>
+						<p>
+							Từ đó gây ra hình dạng “kim cương” trong cây Git và
+							cực kỳ khó khăn khi cây Git trở nên thiếu “tuyến
+							tính” trong việc quan sát theo dõi tiến độ dự án.
+						</p>
+						<h2>
+							<strong>2. Git Rebase là gì?</strong>
+						</h2>
+						<p>
+							Với cách tiếp cận thứ hai cho cùng một nhiệm vụ hợp
+							nhất nhánh, tuy nhiên cũng khá xa lạ với đa số các
+							lập trình viên cũng như tiềm ẩn nhiều rủi ro trong
+							quá trình hợp nhất: <code>Git Merge</code>.
+						</p>
+						<p>
+							Đặt bối cảnh muốn hợp nhất nhánh{' '}
+							<code>feature</code> vào nhánh <code>main</code>,
+							chúng ta thực hiện hợp nhất nhánh bằng git{' '}
+							<code>merge</code> thông qua các dòng lệnh đơn giản
+							sau đây.
+						</p>
+						<pre>
+							<code>
+								git checkout feature{'\n'}git rebase main
+							</code>
+						</pre>
+						<p>
+							Kết quả sau khi thực thi là git <code>rebase</code>,
+							sẽ đưa toàn bộ những commit mới tạo ở nhánh{' '}
+							<code>feature</code> nối tiếp vào {'"ngọn"'} của
+							nhánh <code>main</code>, nhưng thay vì sử dụng một{' '}
+							<code>commit merge</code>, lịch sử commit của dự án
+							sẽ được viết lại bằng cách tạo ra những commit mới
+							ứng với mỗi commit ban đầu của nhánh{' '}
+							<code>feature</code>.
+						</p>
+						<p>
+							Lợi ích chính của việc <code>rebase</code> là bạn sẽ
+							nhận được một lịch sử commit sạch đẹp, rõ ràng và
+							“tuyến tính” theo một đường thẳng từ đầu đến cuối dự
+							án để dễ theo dõi hơn. &nbsp;Khi đó chúng ta sẽ dễ
+							dàng điều hướng, kiểm tra lịch sử project với những
+							câu lệnh như <code>git log</code>,{' '}
+							<code>git bisect</code> và <code>gitk</code> .
+						</p>
+						<p>
+							Tuy nhiên, có 2 điều cần phải thỏa hiệp đối với lịch
+							sử commit kiểu này: độ an toàn và khả năng truy vết.
+							Nếu chúng ta không tuân theo{' '}
+							{'"nguyên tắc an toàn"'}
+							khi <code>rebase</code>, việc viết lại lịch sử của
+							dự án có thể là thảm họa khó lường đối với quy trình
+							cộng tác làm việc nhóm.
+						</p>
+						<p>
+							Một điều ít quan trọng hơn, <code>rebase</code> sẽ
+							làm mất đi ngữ cảnh mà commit <code>merge</code>{' '}
+							cung cấp, từ đó chúng ta sẽ không biết được khi nào
+							những thay đổi ở nhánh tích hợp được đưa vào nhánh
+							chủ đề.
+						</p>
+						<p>
+							Bên dưới là kết quả cuối cùng từ hành động rebase.
+							Lưu ý cách các cam kết C5 và C6 đã được áp dụng lại
+							thẳng vào C4, viết lại lịch sử phát triển và xóa
+							hoàn toàn các cam kết cũ!
+						</p>
 						<img
-							src='https://statics.cdn.200lab.io/2023/06/5-cach-cai-thien-ky-nang-lap-trinh-1.png'
+							src='https://statics.cdn.200lab.io/2023/08/Untitled--1--1.png'
+							alt='Untitled'
+						/>
+						<p>
+							Lưu ý mã băm của các commit C5 và C6 đã thay đổi,
+							đơn giản vì thực tế đó là các cam kết mới đã được
+							tạo (mặc dù nội dung có thể vẫn giống hệt nhau).
+						</p>
+						<h2>
+							<strong>3. So sánh Git Rebase và Git Merge</strong>
+						</h2>
+						<p>
+							Quan sát hình ảnh bên dưới cách trực quan, kết quả
+							của cả hai quá trình <code>Merge</code> và{' '}
+							<code>Rebase</code> đều giúp hợp nhất và thống nhất
+							code giữa 2 nhánh trong quá trình làm việc.
+						</p>
+						<p>
+							Với <code>Merge</code>, tổng số lượng commit tăng 1
+							đơn vị và hình thành đồ thị Git dạng “kim cương”.
+							Với <code>Rebase</code>, tổng số lượng commit không
+							đổi và hình thành đồ thị Git dạng tuyến tính theo
+							một đường thẳng.
+						</p>
+						<img
+							src='https://statics.cdn.200lab.io/2023/08/Untitled--2-.png'
+							alt='Untitled'
+						/>
+						<p>
+							Lợi ích của rebase là nó có 𝐥𝐢𝐧𝐞𝐚𝐫 𝐜𝐨𝐦𝐦𝐢𝐭 𝐡𝐢𝐬𝐭𝐨𝐫𝐲.
+						</p>
+						<h3>
+							<strong>3.1 Ưu điểm của Merge</strong>
+						</h3>
+						<ul>
+							<li>
+								<p>
+									<strong>Không phá hủy:</strong> Hợp nhất là
+									một hoạt động không phá hủy trong Git vì nó
+									không thay đổi các nhánh hiện có. Nó chỉ
+									thêm một cam kết bổ sung gọi là cam kết hợp
+									nhất.
+								</p>
+							</li>
+							<li>
+								<p>
+									<strong>Thay đổi tích hợp:</strong> Việc hợp
+									nhất cho phép người dùng tích hợp các thay
+									đổi từ nhánh này sang nhánh khác. Việc tích
+									hợp này rất hữu ích nếu nhiều nhà phát triển
+									đang làm việc trên các tính năng khác nhau
+									cần được hợp nhất vào nhánh chính.
+								</p>
+							</li>
+							<li>
+								<p>
+									<strong>Nhiều phiên bản cơ sở mã:</strong>{' '}
+									Việc hợp nhất cho phép người dùng giữ nhiều
+									phiên bản cơ sở mã. Điều này hữu ích nếu cần
+									có các phiên bản mã cũ hơn hoặc nếu bạn cần
+									một nhánh riêng để kiểm tra tính năng.
+								</p>
+							</li>
+							<li>
+								<p>
+									<strong>Thay đổi theo dõi:</strong> Việc hợp
+									nhất cho phép người dùng theo dõi những thay
+									đổi đã được thực hiện đối với cơ sở mã. Việc
+									theo dõi rất hữu ích cho việc gỡ lỗi hoặc
+									kiểm tra.
+								</p>
+							</li>
+							<li>
+								<p>
+									<strong>Giải quyết xung đột:</strong> Hợp
+									nhất là một cơ chế giải quyết xung đột tuyệt
+									vời cho phép người dùng hợp nhất các thay
+									đổi mà nhiều nhà phát triển đã thực hiện
+									trên cùng một tệp.
+								</p>
+							</li>
+						</ul>
+						<h3>
+							<strong>3.2 Nhược điểm của Merge</strong>
+						</h3>
+						<ul>
+							<li>
+								<p>
+									<strong>Hợp nhất xung đột:</strong> Một
+									trong những nhược điểm chính của git{' '}
+									<code>merge</code> là khả năng xảy ra xung
+									đột khi hợp nhất khi thực hiện nhiều thay
+									đổi trên cùng một tệp. Đôi khi, việc giải
+									quyết những xung đột như vậy có thể tốn thời
+									gian và khó khăn.
+								</p>
+							</li>
+							<li>
+								<p>
+									<strong>Mất bối cảnh:</strong> Khi những
+									thay đổi từ hai nhánh được hợp nhất, một số
+									ngữ cảnh của những thay đổi có thể bị mất.
+									Do đó, lịch sử cơ sở mã và nguồn gốc của một
+									số thay đổi có thể khó theo dõi hơn.
+								</p>
+							</li>
+							<li>
+								<p>
+									<strong>Sự phức tạp:</strong> Độ phức tạp
+									của cơ sở mã tăng theo số lượng nhánh và sự
+									hợp nhất, điều này làm tăng độ khó bảo trì
+									và làm phức tạp mối quan hệ giữa các nhánh.
+								</p>
+							</li>
+							<li>
+								<p>
+									<strong>Sự phụ thuộc:</strong> Việc hợp nhất
+									nhiều nhánh thành một có thể tạo ra sự phụ
+									thuộc giữa các phần khác nhau của cơ sở mã.
+									Điều này có thể cản trở việc thử nghiệm và
+									triển khai thay đổi hơn nữa vì những thay
+									đổi trong một phần của cơ sở mã có thể ảnh
+									hưởng đến các phần khác.
+								</p>
+							</li>
+						</ul>
+						<h3>
+							<strong>3.3 Ưu điểm của Rebase</strong>
+						</h3>
+						<ul>
+							<li>
+								<p>
+									<strong>Lịch sử dự án tuyến tính:</strong>{' '}
+									Lợi ích chính của việc khởi động lại Git là
+									lịch sử dự án sạch sẽ vì lệnh này loại bỏ
+									các cam kết hợp nhất không cần thiết. Kết
+									quả là một lịch sử dự án hoàn toàn tuyến
+									tính, không có bất kỳ nhánh nào.
+								</p>
+							</li>
+							<li>
+								<p>
+									<strong>Cơ sở mã đơn giản hóa</strong>: Lịch
+									sử tuyến tính giúp bạn dễ dàng hiểu cơ sở mã
+									và truy tìm nguồn gốc của những thay đổi cụ
+									thể.
+								</p>
+							</li>
+							<li>
+								<p>
+									<strong>
+										Giải quyết xung đột hợp nhất:
+									</strong>{' '}
+									Lệnh git <code>rebase</code> áp dụng các
+									thay đổi từ nhánh này lên nhánh khác. Điều
+									này có nghĩa là xung đột hợp nhất được đơn
+									giản hóa và các thay đổi được áp dụng theo
+									cách có trật tự hơn so với hợp nhất git.
+								</p>
+							</li>
+							<li>
+								<p>
+									<strong>
+										Các nhánh tính năng riêng biệt:
+									</strong>{' '}
+									Việc <code>rebase</code> có thể được sử dụng
+									để tách các nhánh tính năng trên nhánh
+									chính. Việc tách chúng ra giúp quản lý nhiều
+									nhánh dễ dàng hơn và cập nhật chúng với
+									những thay đổi mới nhất trong nhánh chính.
+								</p>
+							</li>
+							<li>
+								<p>
+									<strong>Uyển chuyển:</strong> git{' '}
+									<code>rebase</code> linh hoạt hơn git{' '}
+									<code>merge</code> trong việc quản lý các
+									nhánh và thực hiện các thay đổi vì nó cho
+									phép người dùng sắp xếp lại hoặc sửa đổi các
+									cam kết, thay đổi thông báo cam kết, v.v.
+								</p>
+							</li>
+						</ul>
+						<h3>
+							<strong>3.4 Nhược điểm của Rebase</strong>
+						</h3>
+						<ul>
+							<li>
+								<p>
+									<strong>
+										Có thể có xung đột hợp nhất:
+									</strong>{' '}
+									Việc khởi động lại một quy trình công việc
+									có thể gây ra xung đột hợp nhất thường xuyên
+									hơn nếu có một nhánh tồn tại lâu dài đã đi
+									xa khỏi nhánh chính. Nếu nhánh chứa nhiều
+									cam kết mới, chúng có thể xung đột với nhánh
+									chính. Để tránh những vấn đề như vậy, hãy
+									thường xuyên khởi động lại các nhánh của bạn
+									so với nhánh chính.
+								</p>
+							</li>
+							<li>
+								<p>
+									<strong>Mất cam kết:</strong> Chạy git{' '}
+									<code>rebase</code> ở chế độ tương tác với
+									các lệnh phụ loại bỏ các cam kết khỏi nhánh
+									có thể gây ra các cam kết bị mất trong nhật
+									ký tức thời của nhánh. Tuy nhiên, các cam
+									kết thường có thể được khôi phục bằng cách
+									hoàn tác <code>rebase</code> bằng{' '}
+									<code>git reflog</code>.
+								</p>
+							</li>
+							<li>
+								<p>
+									<strong>Thiếu thông tin cam kết:</strong>{' '}
+									Sau khi khởi động lại, bạn không thể biết
+									khi nào các thay đổi ngược dòng được thực
+									hiện và khi nào chúng được tích hợp vào
+									nhánh tính năng.
+								</p>
+							</li>
+						</ul>
+						<h2>
+							<strong>
+								4. Quy trình làm việc với Git Rebase
+							</strong>
+						</h2>
+						<p>
+							Chúng ta đã thấy cách <code>rebase</code> viết lại
+							lịch sử trong khi việc hợp nhất vẫn bảo tồn nó.
+							Nhưng điều này thực sự có ý nghĩa gì theo nghĩa rộng
+							hơn. Và hoạt động này có những khả năng vô hạn và
+							cũng tồn tại nhiều hạn chế tiềm tàng. Vì thế chúng
+							ta cần phải cực kỳ lưu ý và nắm rõ quy trình làm
+							việc cần tuân thủ khi làm việc với{' '}
+							<code>Git Rebase</code>.
+						</p>
+						<h3>
+							<strong>4.1. Local cleanup</strong>
+						</h3>
+						<p>
+							Trong quá trình phát triển một tính năng trên branch
+							riêng, các lập trình viên có thể có nhiều commit. Để
+							cây Git được clean và gọn hơn, chúng ta cần tiến
+							hành squash commit thông qua tính năng tự{' '}
+							<code>rebase</code> trên chính nhánh{' '}
+							<code>feature</code> .
+						</p>
+						<p>
+							Ví dụ bạn có 3 commits liên tục cần gộp lại 1
+							commit, thực hiện lệnh sau:
+						</p>
+						<pre>
+							<code>
+								git switch feature{'\n'}git rebase -i HEAD~3
+							</code>
+						</pre>
+						<p>
+							Màn hình hiển thị một tệp editor hiển thị lịch sử
+							commits, chúng ta tiến hành cỉnh sửa file theo
+							syntax. Các options bao gồm:
+						</p>
+						<ul>
+							<li>
+								<p>p: pick - giữ lại commit</p>
+							</li>
+							<li>
+								<p>r: reword - giữ lại commit và sửa message</p>
+							</li>
+							<li>
+								<p>
+									s: squash - bỏ qua commit nhưng tích hợp log
+									vào commit liền trước
+								</p>
+							</li>
+							<li>
+								<p>
+									f: fixup - bỏ qua commit và xoá hoàn toàn
+									log commit
+								</p>
+							</li>
+						</ul>
+						<pre>
+							<code className='language-bash'>
+								pick 1fc6c95 Patch A{'\n'}pick 6b2481b Patch B
+								{'\n'}pick dd1475d something I want to split
+								{'\n'}pick c619268 A fix for Patch B{'\n'}pick
+								fa39187 something to add to patch A{'\n'}pick
+								4ca2acc i {"cant'"} typ goods{'\n'}pick 7b36971
+								something to move before patch B{'\n'}
+								{'\n'}# Rebase 41a72e6..7b36971 onto 41a72e6
+								{'\n'}#{'\n'}# Commands:{'\n'}#{'  '}p, pick =
+								use commit{'\n'}#{'  '}r, reword = use commit,
+								but edit the commit message{'\n'}#{'  '}e, edit
+								= use commit, but stop for amending
+								{'\n'}#{'  '}s, squash = use commit, but meld
+								into previous commit{'\n'}#{'  '}f, fixup = like
+								{`"squash", but discard this commit's log message`}
+								{'\n'}#{'  '}x, exec = run command (the rest of
+								the line) using shell
+								{'\n'}#{'\n'}# If you remove a line here THAT
+								COMMIT WILL BE LOST.{'\n'}# However, if you
+								remove everything, the rebase will be aborted.
+								{'\n'}#{'\n'}
+							</code>
+						</pre>
+						<p>
+							Tiến hành giữ lại commit đầu tiền và squash toàn bộ
+							các commits liền sau bằng cách thay thế pick thành
+							squash. Lưu file <code>:wq</code>và thoát{' '}
+							<code>qa!</code>.
+						</p>
+						<h3>
+							<strong>4.2. Rebasing from main</strong>
+						</h3>
+						<p>
+							Tiếp theo, sau khi đã gom tất cả các commit của mình
+							làm một chúng ta bắt đầu tiến hành{' '}
+							<code>rebase</code> so với branch <code>main</code>.
+							Lưu ý, trước đó ta cần nhảy sang nhánh{' '}
+							<code>main</code>và tiến hành pull code từ remote để
+							cập nhật các thay đổi mới nhất trên{' '}
+							<code>main</code>.
+						</p>
+						<pre>
+							<code className='language-bash'>
+								git switch main{'\n'}git pull origin main{'\n'}
+								git switch feature{'\n'}git rebase -i main
+								feature
+							</code>
+						</pre>
+						<h3>
+							<strong>4.3. Push force to feature</strong>
+						</h3>
+						<p>
+							Sau khi đã xử lý các conflicts liên quan và squash
+							các commit mong muốn, lúc này các commits trên{' '}
+							<code>main</code>đã được cắt nối tuyến tính vào ngay
+							đầu commit trên <code>feature</code> . Khi đó, chúng
+							ta sẵn sàng push lên remote và sẵn sàng tạo
+							Merge/Pull request
+						</p>
+						<pre>
+							<code>git push origin feature --force </code>
+						</pre>
+						<p>Lưu ý:</p>
+						<ul>
+							<li>
+								<p>
+									Sau khi <code>rebase</code>, lịch sử commit
+									local trên nhánh <code>feature</code> đã
+									thay đổi và conflict so với nhánh{' '}
+									<code>feature</code> trên remote, vì thế ta
+									cần push force để ghi đè toàn bộ cây Git
+									trên branch featue.
+								</p>
+							</li>
+						</ul>
+						<h3>
+							<strong>4.4 Create merge/pull request</strong>
+						</h3>
+						<p>Lưu ý:</p>
+						<ul>
+							<li>
+								<p>
+									Trong quá trình tạo PR/MR, quá trình approve
+									cần được diễn ra lần lượt có thứ tự và các
+									PR/MR còn lại cần lập tức{' '}
+									<code>rebase</code> ngay khi 1 PR/MR đã được
+									merge vào <code>main</code>.
+								</p>
+							</li>
+						</ul>
+						<img
+							src='https://statics.cdn.200lab.io/2023/08/08-10-Integrating-a-feature-into-master-with-and-without-a-rebase.svg'
 							alt=''
 						/>
-					</p>
-					<p>Am hiểu về lĩnh vực mà bạn đang làm việc</p>
-					<p>
-						Các lập trình viên thường làm việc với nhiều loại dự án
-						phần mềm khác nhau. Mỗi dự án phần mềm có thể thuộc các
-						lĩnh vực khác nhau như chăm sóc sức khỏe, thương mại
-						điện tử, điện toán đám mây, giáo dục và quy trình kinh
-						doanh.{' '}
-					</p>
-					<p>
-						Nếu bạn bị giới hạn trong một dự án phần mềm thì việc
-						nâng cao kỹ năng của bạn sẽ bị hạn chế. Nói cách khác,
-						nếu bạn biết từng chút về dự án của mình sau khi làm
-						việc trong vài năm, việc phát triển hàng ngày sẽ trở nên
-						rất dễ dàng nếu bạn làm việc với những thứ mới mẻ.
-					</p>
-					<p>
-						Việc am hiểu lĩnh vực của dự án mà bạn thực hiện sẽ mở
-						ra nhiều cơ hội học tập mới. Ai đó có thể tranh luận
-						rằng kiến ​​thức lĩnh vực chỉ cần cho các nhà phân tích
-						kinh doanh - không phải cho các nhà phát triển.{' '}
-					</p>
-					<p>
-						Tuy nhiên, không thể lập trình đúng cách nếu chúng ta
-						xem toàn bộ quy trình của hệ thống phần mềm là một hệ
-						thống trừu tượng. Nếu chúng ta hiểu cả kỹ thuật và lĩnh
-						vực, toàn bộ quá trình phát triển phần mềm sẽ trở nên rõ
-						ràng và dễ dàng hơn.
-					</p>
-					<p>
-						Các lập trình viên có thể đưa ra các giải pháp hoàn
-						chỉnh khi họ am hiểu lĩnh vực của dự án mà họ đang thực
-						hiện. Điều này có nghĩa là không ai sẽ giải quyết điều
-						gì đó tốt hơn mà không nghiên cứu về nó.
-					</p>
-					<h2 id='4-t-m-hi-u-s-u-h-n-v-ki-n-tr-c-ng-d-ng'>
-						4. Tìm hiểu sâu hơn về kiến trúc ứng dụng
-					</h2>
-					<p>
+						<h2>
+							<strong>5. Tổng kết</strong>
+						</h2>
+						<p>
+							Cả hai phương pháp đều giúp đạt được mục tiêu hợp
+							nhất các thay đổi từ một nhánh vào nhánh chính trong
+							quy trình làm việc cần thống nhất code giữa các lập
+							trình viên. Thông qua bài viết hi vọng là chúng ta
+							đã có thể hiểu rõ nguyên lý hoạt động khác nhau và
+							cân nhắc sự lựa chọn phù hợp tuỳ theo nhu cầu dự án.
+						</p>
+						<p>
+							Nếu chúng ta cần ưu tiên một cây Git sạch sẽ, gọn
+							gàng và “tuyến tính” dễ dàng theo dõi theo tiến độ
+							dự án và không có sự dư thừa những commit merge thì{' '}
+							<code>Git rebase</code> là một lựa chọn tối ưu và
+							thông minh.
+						</p>
+						<p>
+							Ngược lại, nếu chúng ta cần ưu tiên bảo toàn lịch sử
+							đầy đủ của dự án và tránh những nguy cơ mất mát dữ
+							liệu và không ngại các hình dạng “kim cương” rối mắt
+							trên cây Git khi merge chéo qua lại giữa các branch
+							thì <code>Git merge</code> là một lựa chọn đơn giản
+							và hiệu quả.
+						</p>
 						<img
-							src='https://statics.cdn.200lab.io/2023/06/5-cach-cai-thien-ky-nang-lap-trinh-3.jpeg'
+							src='https://statics.cdn.200lab.io/2023/08/image-39.png'
 							alt=''
 						/>
-					</p>
-					<p>Tìm hiểu sâu hơn về kiến trúc ứng </p>
-					<p>
-						Có rất nhiều mẫu kiến ​​trúc phần mềm: Layered,
-						client-server, plug-in, kiến trúc pub/sub, v.v là những{' '}
-						<a href='https://200lab.io/blog/design-patterns-hieu-dung-va-dung-dung/'>
-							Software Design Pattern
-						</a>{' '}
-						(Mẫu thiết kế phần mềm) phổ biến được sử dụng hiện nay.
-					</p>
-					<p>
-						Các kiến ​​trúc phần mềm thường phân toàn bộ dự án thành
-						các dự án con để giảm độ phức tạp và để mở rộng khả năng
-						bảo trì. Trong hầu hết các tình huống, lập trình viên
-						không cần phải hiểu từng chút nhỏ về kiến ​​trúc dự án
-						phần mềm để đóng góp cho dự án.{' '}
-					</p>
-					<p>
-						Tuy nhiên, các lập trình viên phải hiểu rõ về kiến
-						​​trúc của hệ thống phần mềm để có những đóng góp bổ
-						sung. Ngoài ra, sự phát triển nghề nghiệp của một lập
-						trình viên điển hình sẽ hướng tới vai trò Software
-						Architect.‌‌
-					</p>
-					<p>
-						Hơn nữa, các hệ thống phần mềm thường cần phải thường
-						xuyên nâng cấp và cải tiến kiến ​​trúc dựa trên các yêu
-						cầu mới.{' '}
-					</p>
-					<p>
-						Ví dụ: khi sản phẩm Phần mềm như một dịch vụ (Software
-						as a service) của bạn có người dùng mới từ các quốc gia
-						khác nhau, bạn sẽ phải tích CDN (Content delivery
-						networks). Biết rõ hơn về kiến ​​trúc hiện tại sẽ giúp
-						bạn đề xuất những cải tiến kiến ​​trúc đáng kể cho dự
-						án.
-					</p>
-					<p>
-						Thật tuyệt khi nghiên cứu kiến ​​trúc của dự án ở một
-						cấp độ cao mà bạn có thể giải thích kiến ​​trúc đó cho
-						người khác hiểu. Bạn có thể tham khảo các bài giải thích
-						về kiến trúc của Netflix để hiểu rõ hơn cách mà Netflix
-						xây dựng kiến trúc phần mềm của họ.
-					</p>
-					<p>[</p>
-					<p>
-						A Design Analysis of Cloud-based Microservices
-						Architecture at Netflix
-					</p>
-					<p>1. Introduction</p>
-					<p>
-						<img
-							src='https://miro.medium.com/fit/c/152/152/1*sHhtYhaCe2Uc3IU0IgKwIQ.png'
-							alt=''
-						/>
-						The StartupCao Duc Nguyen
-					</p>
-					<p>
-						<img
-							src='https://miro.medium.com/max/720/1*0MHo_ywcTvh1IVjf1h9ezA.jpeg'
-							alt=''
-						/>
-					</p>
-					<p>
-						](
-						<a href='https://medium.com/swlh/a-design-analysis-of-cloud-based-microservices-architecture-at-netflix-98836b2da45f'>
-							https://medium.com/swlh/a-design-analysis-of-cloud-based-microservices-architecture-at-netflix-98836b2da45f
-						</a>
-						)
-					</p>
-					<h2 id='5-tr-th-nh-m-t-ng-i-h-c-v-c-ng-nh-l-m-t-gi-o-vi-n'>
-						5. Trở thành một người học và cũng như là một giáo viên
-					</h2>
-					<p>
-						<img
-							src='https://statics.cdn.200lab.io/2023/06/5-cach-cai-thien-ky-nang-lap-trinh-2-1.jpeg'
-							alt=''
-						/>
-					</p>
-					<p>Trở thành một người học và cũng như là một giáo viên</p>
-					<p>
-						Trong mọi lĩnh vực, quá trình học tập không bao giờ kết
-						thúc. Tương tự, luôn có một cái gì đó mới để học mỗi
-						ngày trong lĩnh vực lập trình. Nhiều lý thuyết, bài báo,
-						tài liệu nghiên cứu và triển khai liên quan đến khoa học
-						máy tính được xuất bản mỗi ngày. Lĩnh vực khoa học máy
-						tính vẫn đang phát triển như bất kỳ lĩnh vực nào khác
-						trên thế giới.{' '}
-					</p>
-					<p>
-						Do đó, mỗi ngày, bạn sẽ tìm thấy thứ gì đó sẽ nâng cao
-						kỹ năng của mình. Ví dụ: bạn có thể học một design
-						pattern mới ngay hôm nay để nâng cao khả năng đọc code
-						bạn viết hôm qua.
-					</p>
-					<p>
-						Ngoài ra, giảng dạy là một cách tuyệt vời để ghi nhớ
-						những gì bạn đã học. Bạn không cần phải giải thích mọi
-						thứ về một giải pháp cụ thể cho một trình biên dịch -
-						bởi vì nó chỉ quan tâm đến syntax code của bạn.{' '}
-					</p>
-					<p>
-						Tuy nhiên, bạn phải giải thích hầu hết mọi thứ nếu bạn
-						đang giải thích một giải pháp cụ thể cho một người nào
-						đó. Vì vậy, trở thành một giáo viên cho một ai đó là một
-						cách tuyệt vời để học một điều gì đó chuyên sâu.
-					</p>
-					<h2 id='l-i-k-t-'>Lời kết </h2>
-					<p>
-						Việc ưu tiên hiệu năng ứng dụng bị đánh giá thấp trong
-						thế giới hiện đại do máy tính rất mạnh mẽ. Nhưng sức
-						mạnh tính toán vẫn còn hạn chế. Do đó, các lập trình
-						viên luôn cần phải đưa ra các giải pháp hiệu quả.‌‌Học
-						liên tục là thực hành quan trọng nhất để trở thành
-						chuyên gia trong lĩnh vực lập trình. Albert Einstein đã
-						từng nói:
-					</p>
-					<blockquote>
-						<p>Once you stop learning you start dying.</p>
-					</blockquote>
+						<h2>
+							<strong>6. Tài liệu tham khảo</strong>
+						</h2>
+						<ul>
+							<li>
+								<p>
+									<a
+										target='_blank'
+										rel='noopener noreferrer nofollow'
+										href='https://blog.git-init.com/differences-between-git-merge-and-rebase-and-why-you-should-care/'
+									>
+										https://blog.git-init.com/differences-between-git-merge-and-rebase-and-why-you-should-care/
+									</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a
+										target='_blank'
+										rel='noopener noreferrer nofollow'
+										href='https://www.atlassian.com/git/tutorials/merging-vs-rebasing'
+									>
+										https://www.atlassian.com/git/tutorials/merging-vs-rebasing
+									</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a
+										target='_blank'
+										rel='noopener noreferrer nofollow'
+										href='https://www.freecodecamp.org/news/git-rebase-handbook/'
+									>
+										https://www.freecodecamp.org/news/git-rebase-handbook/
+									</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a
+										target='_blank'
+										rel='noopener noreferrer nofollow'
+										href='https://phoenixnap.com/kb/git-rebase-vs-merge'
+									>
+										https://phoenixnap.com/kb/git-rebase-vs-merge
+									</a>
+								</p>
+							</li>
+							<li>
+								<p>
+									<a
+										target='_blank'
+										rel='noopener noreferrer nofollow'
+										href='https://twitter.com/alexxubyte/status/1617926489579851777'
+									>
+										https://twitter.com/alexxubyte/status/1617926489579851777
+									</a>
+								</p>
+							</li>
+						</ul>
+					</>
 				</div>
 
 				<div>
@@ -424,7 +738,7 @@ export default function BlogDetail() {
 							</ul>
 						</div>
 
-						<div className='grid grid-cols-3 bg-gray-900 rounded'>
+						<div className='grid grid-cols-3 bg-gray-900'>
 							<Image
 								alt=''
 								src='https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGFwdG9wfGVufDB8fDB8fHww&w=1000&q=80'
@@ -449,26 +763,39 @@ export default function BlogDetail() {
 			<div className='flex items-center flex-wrap'>
 				<Link
 					href={''}
-					className='py-1.5 px-4 rounded transition hover:bg-emerald-500 text-[0.9375rem] bg-gray-700 mr-2.5 mb-2'
+					className='py-1.5 px-4 transition hover:bg-emerald-500 text-[0.9375rem] bg-gray-700 mr-2.5 mb-2'
 				>
 					#python
 				</Link>
 				<Link
 					href={''}
-					className='py-1.5 px-4 rounded transition hover:bg-emerald-500 text-[0.9375rem] bg-gray-700 mr-2.5 mb-2'
+					className='py-1.5 px-4 transition hover:bg-emerald-500 text-[0.9375rem] bg-gray-700 mr-2.5 mb-2'
 				>
 					#tài liệu
 				</Link>
 			</div>
 
-			<div className='max-w-3xl mt-16 mx-auto'>
-				<Title>Bài viết liên quan</Title>
+			<div className='max-w-3xl mt-16 mx-auto space-y-16'>
+				<div>
+					<Title>Bình luận</Title>
 
-				<div className='space-y-8'>
-					<BlogCardHorizontal />
-					<BlogCardHorizontal />
-					<BlogCardHorizontal />
-					<BlogCardHorizontal />
+					<form className='flex flex-col items-end'>
+						<Textarea placeholder='Viết bình luận của bạn tại đây' rows={4} />
+						<button className='px-6 py-2 mt-4 mr-[2%] transition hover:bg-amber-600 bg-emerald-500'>
+							Bình luận
+						</button>
+					</form>
+				</div>
+
+				<div>
+					<Title>Bài viết liên quan</Title>
+
+					<div className='space-y-8'>
+						<BlogCardHorizontal />
+						<BlogCardHorizontal />
+						<BlogCardHorizontal />
+						<BlogCardHorizontal />
+					</div>
 				</div>
 			</div>
 		</div>

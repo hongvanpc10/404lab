@@ -2,7 +2,7 @@ import fonts from '@/configs/fonts'
 import moment from 'moment'
 import type { Metadata } from 'next'
 import 'remixicon/fonts/remixicon.css'
-import './github-dark.min.css'
+import './highlightjs.min.css'
 import './globals.css'
 
 export const metadata: Metadata = {
