@@ -19,6 +19,7 @@
     "@tiptap/extension-table-header": "^2.1.7",
     "@tiptap/extension-table-row": "^2.1.7",
     "@tiptap/extension-underline": "^2.1.7",
+    "@tiptap/extension-youtube": "^2.1.7",
     "@tiptap/pm": "^2.1.7",
     "@tiptap/react": "^2.1.7",
     "@tiptap/starter-kit": "^2.1.7",

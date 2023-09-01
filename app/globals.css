@@ -23,4 +23,14 @@
 	input[type='number'] {
 		-moz-appearance: textfield;
 	}
+
+	div[data-youtube-video],
+	div.iframe-wrapper {
+		@apply relative w-full pt-[56.25%];
+	}
+
+	div[data-youtube-video] iframe,
+	div.iframe-wrapper iframe {
+		@apply absolute w-full h-full inset-0;
+	}
 }

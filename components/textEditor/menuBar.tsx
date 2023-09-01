@@ -7,7 +7,7 @@ import py from 'highlight.js/lib/languages/python'
 import ts from 'highlight.js/lib/languages/typescript'
 import html from 'highlight.js/lib/languages/xml'
 import { lowlight } from 'lowlight'
-import { useCallback, useRef, useState } from 'react'
+import { useRef } from 'react'
 import Popover from '../popover'
 
 lowlight.registerLanguage('html', html)
@@ -21,6 +21,8 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 	const urlRef = useRef<HTMLInputElement>(null)
 	const colsRef = useRef<HTMLInputElement>(null)
 	const rowsRef = useRef<HTMLInputElement>(null)
+	const youtubeRef = useRef<HTMLInputElement>(null)
+	const iframeRef = useRef<HTMLInputElement>(null)
 
 	const addImage = () => {
 		if (imageRef.current && editor && imageRef.current.value) {
@@ -30,6 +32,32 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 				.setImage({ src: imageRef.current.value })
 				.run()
 			imageRef.current.value = ''
+		}
+	}
+
+	const addYoutubeVideo = () => {
+		if (youtubeRef.current && editor && youtubeRef.current.value) {
+			editor
+				.chain()
+				.focus()
+				.setYoutubeVideo({
+					src: youtubeRef.current.value,
+				})
+				.run()
+			youtubeRef.current.value = ''
+		}
+	}
+
+	const addIframe = () => {
+		if (iframeRef.current && editor && iframeRef.current.value) {
+			editor
+				.chain()
+				.focus()
+				.setIframe({
+					src: iframeRef.current.value,
+				})
+				.run()
+			iframeRef.current.value = ''
 		}
 	}
 
@@ -84,6 +112,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			>
 				<i className={`ri-bold ri-lg`}></i>
 			</button>
+
 			<button
 				type='button'
 				onClick={() => editor.chain().focus().toggleItalic().run()}
@@ -95,6 +124,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			>
 				<i className={`ri-italic ri-lg`}></i>
 			</button>
+
 			<button
 				type='button'
 				onClick={() => editor.chain().focus().toggleUnderline().run()}
@@ -106,6 +136,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			>
 				<i className={`ri-underline ri-lg`}></i>
 			</button>
+
 			<button
 				type='button'
 				onClick={() => editor.chain().focus().toggleStrike().run()}
@@ -117,6 +148,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			>
 				<i className={`ri-strikethrough ri-lg`}></i>
 			</button>
+
 			<button
 				type='button'
 				onClick={() => editor.chain().focus().toggleCode().run()}
@@ -128,6 +160,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			>
 				<i className={`ri-code-view ri-lg`}></i>
 			</button>
+
 			<button
 				type='button'
 				onClick={() => editor.chain().focus().toggleHighlight().run()}
@@ -139,6 +172,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			>
 				<i className={`ri-mark-pen-line ri-lg`}></i>
 			</button>
+
 			<button
 				type='button'
 				onClick={() =>
@@ -152,6 +186,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			>
 				<i className={`ri-h-2 ri-lg`}></i>
 			</button>
+
 			<button
 				type='button'
 				onClick={() =>
@@ -165,6 +200,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			>
 				<i className={`ri-h-3 ri-lg`}></i>
 			</button>
+
 			<button
 				type='button'
 				onClick={() =>
@@ -178,6 +214,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			>
 				<i className={`ri-h-4 ri-lg`}></i>
 			</button>
+
 			<button
 				type='button'
 				onClick={() => editor.chain().focus().setParagraph().run()}
@@ -189,6 +226,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			>
 				<i className={`ri-paragraph ri-lg`}></i>
 			</button>
+
 			<button
 				type='button'
 				onClick={() => editor.chain().focus().toggleBulletList().run()}
@@ -200,6 +238,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			>
 				<i className={`ri-list-unordered ri-lg`}></i>
 			</button>
+
 			<button
 				type='button'
 				onClick={() => editor.chain().focus().toggleOrderedList().run()}
@@ -211,6 +250,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			>
 				<i className={`ri-list-ordered ri-lg`}></i>
 			</button>
+
 			<button
 				type='button'
 				onClick={() => editor.chain().focus().toggleCodeBlock().run()}
@@ -222,6 +262,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			>
 				<i className={`ri-code-box-line ri-lg`}></i>
 			</button>
+
 			<button
 				type='button'
 				onClick={() => editor.chain().focus().toggleBlockquote().run()}
@@ -233,6 +274,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			>
 				<i className={`ri-double-quotes-l ri-lg`}></i>
 			</button>
+
 			<button
 				type='button'
 				onClick={() => editor.chain().focus().setHardBreak().run()}
@@ -244,6 +286,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			>
 				<i className={`ri-text-wrap ri-lg`}></i>
 			</button>
+
 			<Popover
 				render={() => (
 					<div className='p-1 flex items-center'>
@@ -274,6 +317,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 					<i className={`ri-image-add-line ri-lg`}></i>
 				</button>
 			</Popover>
+
 			<Popover
 				render={() => (
 					<div className='p-1 flex items-center'>
@@ -304,6 +348,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 					<i className={`ri-link ri-lg`}></i>
 				</button>
 			</Popover>
+
 			<Popover
 				render={() => (
 					<div className='p-1 flex items-center'>
@@ -345,6 +390,69 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 					<i className={`ri-table-line ri-lg`}></i>
 				</button>
 			</Popover>
+
+			<Popover
+				render={() => (
+					<div className='p-1 flex items-center'>
+						<input
+							placeholder='Nhập url video youtube'
+							autoFocus
+							className='bg-transparent px-4 w-64 outline-none text-sm'
+							ref={youtubeRef}
+						/>
+						<button
+							type='button'
+							className='text-sm text-emerald-500 py-1.5 px-4'
+							onClick={addYoutubeVideo}
+						>
+							Tải
+						</button>
+					</div>
+				)}
+			>
+				<button
+					type='button'
+					className={`flex items-center transition justify-center w-7 h-7 text-gray-400 ${
+						editor.isActive('youtube')
+							? 'text-white bg-emerald-500'
+							: 'hover:text-emerald-500'
+					}`}
+				>
+					<i className={`ri-youtube-line ri-lg`}></i>
+				</button>
+			</Popover>
+
+			<Popover
+				render={() => (
+					<div className='p-1 flex items-center'>
+						<input
+							placeholder='Nhập url iframe'
+							autoFocus
+							className='bg-transparent px-4 w-64 outline-none text-sm'
+							ref={iframeRef}
+						/>
+						<button
+							type='button'
+							className='text-sm text-emerald-500 py-1.5 px-4'
+							onClick={addIframe}
+						>
+							Tải
+						</button>
+					</div>
+				)}
+			>
+				<button
+					type='button'
+					className={`flex items-center transition justify-center w-7 h-7 text-gray-400 ${
+						editor.isActive('iframe')
+							? 'text-white bg-emerald-500'
+							: 'hover:text-emerald-500'
+					}`}
+				>
+					<i className={`ri-file-code-line ri-lg`}></i>
+				</button>
+			</Popover>
+
 			<button
 				type='button'
 				onClick={() => editor.chain().focus().setHorizontalRule().run()}
@@ -356,6 +464,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			>
 				<i className={`ri-separator ri-lg`}></i>
 			</button>
+
 			<button
 				type='button'
 				onClick={() =>
@@ -369,6 +478,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			>
 				<i className={`ri-format-clear ri-lg`}></i>
 			</button>
+
 			<button
 				type='button'
 				onClick={() => editor.chain().focus().undo().run()}
@@ -380,6 +490,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 			>
 				<i className={`ri-arrow-go-back-line ri-lg`}></i>
 			</button>
+
 			<button
 				type='button'
 				onClick={() => editor.chain().focus().redo().run()}

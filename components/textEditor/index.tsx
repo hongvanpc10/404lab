@@ -1,5 +1,6 @@
 'use client'
 
+import Iframe from '@/helpers/tiptap/iframe'
 import CodeBlockLowlight from '@tiptap/extension-code-block-lowlight'
 import Highlight from '@tiptap/extension-highlight'
 import Image from '@tiptap/extension-image'
@@ -9,6 +10,7 @@ import TableCell from '@tiptap/extension-table-cell'
 import TableHeader from '@tiptap/extension-table-header'
 import TableRow from '@tiptap/extension-table-row'
 import Underline from '@tiptap/extension-underline'
+import Youtube from '@tiptap/extension-youtube'
 import { EditorContent, Extensions, useEditor } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
 import { lowlight } from 'lowlight'
@@ -24,6 +26,12 @@ export const extensions: Extensions = [
 	TableHeader,
 	TableRow,
 	Underline,
+	Youtube.configure({
+		ccLanguage: 'vi',
+		origin: '404lab.site',
+		interfaceLanguage: 'vi',
+	}),
+	Iframe,
 ]
 
 export default function TextEditor() {
