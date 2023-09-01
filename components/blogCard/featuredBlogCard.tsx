@@ -11,7 +11,7 @@ export default function FeaturedBlogCard({ className }: Props) {
 		<div className={`relative h-full ${className}`}>
 			<Image
 				alt=''
-				src='https://statics.cdn.200lab.io/2022/11/web-development-la--gi--.png'
+				src='https://statics.cdn.200lab.io/2023/08/nextjs_thumbnail.png?auto=format,compress&width=1500'
 				className='aspect-w-16 h-full aspect-h-10'
 			/>
 			<Link href={''}>
@@ -26,7 +26,7 @@ export default function FeaturedBlogCard({ className }: Props) {
 				</div>
 				<h3 className='text-2xl font-medium transition hover:text-emerald-500'>
 					<Link href={''}>
-						Web Developer là gì? Tìm hiểu về Web Development A - Z
+						NextJS là gì? Mọi thứ bạn cần biết về NextJS
 					</Link>
 				</h3>
 			</div>

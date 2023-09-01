@@ -8,7 +8,7 @@ export default function BlogCardHorizontal() {
 			<div className='col-span-3'>
 				<h3 className='mb-2 text-lg font-medium transition hover:text-emerald-500'>
 					<Link href={''} className='line-clamp-2'>
-						Web Developer là gì? Tìm hiểu về Web Development A - Z
+						NextJS là gì? Mọi thứ bạn cần biết về NextJS
 					</Link>
 				</h3>
 
@@ -21,7 +21,7 @@ export default function BlogCardHorizontal() {
 				<div className='flex items-center mt-4'>
 					<Image
 						alt=''
-						src='https://i.pinimg.com/550x/17/00/49/170049bff33ceaa7195ad7f31b58b039.jpg'
+						src='https://statics.cdn.200lab.io/2023/08/nextjs_thumbnail.png?auto=format,compress&width=1500'
 						className='w-9 h-9 rounded-full'
 					/>
 

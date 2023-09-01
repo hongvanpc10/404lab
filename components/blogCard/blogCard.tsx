@@ -8,13 +8,13 @@ export default function BlogCard() {
 			<Link href={'/regferg'}>
 				<Image
 					alt=''
-					src='https://statics.cdn.200lab.io/2022/11/web-development-la--gi--.png'
+					src='https://statics.cdn.200lab.io/2023/08/nextjs_thumbnail.png?auto=format,compress&width=1500'
 					className='aspect-w-16 aspect-h-10'
 				/>
 			</Link>
 			<h3 className='mt-2 mb-1.5 text-lg font-medium transition hover:text-emerald-500'>
 				<Link href={'/ergerg'} className='line-clamp-2'>
-					Web Developer là gì? Tìm hiểu về Web Development A - Z
+					NextJS là gì? Mọi thứ bạn cần biết về NextJS
 				</Link>
 			</h3>
 			<div className='flex items-center mb-2 text-sm text-gray-300'>
