@@ -188,7 +188,7 @@ git rebase -i main feature</code></pre><h3><strong>4.3. Push force to feature</s
 							placeholder='Viết bình luận của bạn tại đây'
 							rows={4}
 						/>
-						<button className='px-6 py-2 mt-4 mr-[2%] transition hover:bg-amber-600 bg-emerald-500'>
+						<button className='px-6 py-2 mt-4 mr-4 transition hover:bg-amber-600 bg-emerald-500'>
 							Bình luận
 						</button>
 					</form>
