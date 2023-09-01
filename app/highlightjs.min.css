@@ -1,8 +1,7 @@
-pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}/*!
-  Theme: Tokyo-night-Dark
-  origin: https://github.com/enkia/tokyo-night-vscode-theme
-  Description: Original highlight.js style
-  Author: (c) Henri Vandersleyen <hvandersleyen@gmail.com>
-  License: see project LICENSE
-  Touched: 2022
-*/.hljs-comment,.hljs-meta{color:#565f89}.hljs-deletion,.hljs-doctag,.hljs-regexp,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-tag,.hljs-template-tag,.hljs-variable.language_{color:#f7768e}.hljs-link,.hljs-literal,.hljs-number,.hljs-params,.hljs-template-variable,.hljs-type,.hljs-variable{color:#ff9e64}.hljs-attribute,.hljs-built_in{color:#e0af68}.hljs-keyword,.hljs-property,.hljs-subst,.hljs-title,.hljs-title.class_,.hljs-title.class_.inherited__,.hljs-title.function_{color:#7dcfff}.hljs-selector-tag{color:#73daca}.hljs-addition,.hljs-bullet,.hljs-quote,.hljs-string,.hljs-symbol{color:#9ece6a}.hljs-code,.hljs-formula,.hljs-section{color:#7aa2f7}.hljs-attr,.hljs-char.escape_,.hljs-keyword,.hljs-name,.hljs-operator{color:#bb9af7}.hljs-punctuation{color:#c0caf5}.hljs{background:#1a1b26;color:#9aa5ce}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+/*!
+  Theme: Darcula
+  Author: jetbrains
+  License: ~ MIT (or more permissive) [via base16-schemes-source]
+  Maintainer: @highlightjs/core-team
+  Version: 2021.09.0
+*/pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{color:#a9b7c6;background:#2b2b2b}.hljs ::selection,.hljs::selection{background-color:#323232;color:#a9b7c6}.hljs-comment{color:#606366}.hljs-tag{color:#a4a3a3}.hljs-operator,.hljs-punctuation,.hljs-subst{color:#a9b7c6}.hljs-operator{opacity:.7}.hljs-bullet,.hljs-deletion,.hljs-name,.hljs-selector-tag,.hljs-template-variable,.hljs-variable{color:#4eade5}.hljs-attr,.hljs-link,.hljs-literal,.hljs-number,.hljs-symbol,.hljs-variable.constant_{color:#689757}.hljs-class .hljs-title,.hljs-title,.hljs-title.class_{color:#bbb529}.hljs-strong{font-weight:700;color:#bbb529}.hljs-addition,.hljs-code,.hljs-string,.hljs-title.class_.inherited__{color:#6a8759}.hljs-built_in,.hljs-doctag,.hljs-keyword.hljs-atrule,.hljs-quote,.hljs-regexp{color:#629755}.hljs-attribute,.hljs-function .hljs-title,.hljs-section,.hljs-title.function_,.ruby .hljs-property{color:#9876aa}.diff .hljs-meta,.hljs-keyword,.hljs-template-tag,.hljs-type{color:#cc7832}.hljs-emphasis{color:#cc7832;font-style:italic}.hljs-meta,.hljs-meta .hljs-keyword,.hljs-meta .hljs-string{color:grey}.hljs-meta .hljs-keyword,.hljs-meta-keyword{font-weight:700}
