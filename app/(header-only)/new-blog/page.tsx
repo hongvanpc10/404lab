@@ -89,9 +89,11 @@ export default function NewBlog() {
 					<TextEditor />
 				</div>
 
-				<button className='px-8 py-3 !mt-16 mr-4 transition hover:bg-amber-600 bg-emerald-500'>
-					Đăng bài viết
-				</button>
+				<div className='flex justify-end'>
+					<button className='px-8 py-3 !mt-16 mr-4 transition hover:bg-amber-600 bg-emerald-500'>
+						Đăng bài viết
+					</button>
+				</div>
 			</form>
 		</div>
 	)
