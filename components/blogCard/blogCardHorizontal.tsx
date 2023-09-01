@@ -8,7 +8,8 @@ export default function BlogCardHorizontal() {
 			<div className='col-span-3'>
 				<h3 className='mb-2 text-lg font-medium transition hover:text-emerald-500'>
 					<Link href={''} className='line-clamp-2'>
-						BOOTSTRAP LÀ GÌ? HƯỚNG DẪN DOWNLOAD VÀ CÀI ĐẶT BOOTSTRAP
+						Công cụ phát triển website là gì? 18 công cụ phát triển
+						website
 					</Link>
 				</h3>
 
@@ -21,7 +22,7 @@ export default function BlogCardHorizontal() {
 				<div className='flex items-center mt-4'>
 					<Image
 						alt=''
-						src='https://statics.cdn.200lab.io/2023/05/Thumbnails-Blog--1200---628-px---9-.jpg?auto=format,compress&width=1500'
+						src='https://statics.cdn.200lab.io/2022/12/Thumbnails-Blog--2-.png?auto=format,compress&width=1500'
 						className='w-9 h-9 rounded-full'
 					/>
 

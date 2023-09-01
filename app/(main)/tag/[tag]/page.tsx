@@ -30,7 +30,7 @@ export default function BlogsByTag() {
 				<div className='flex justify-end'>
 					<Link
 						href={''}
-						className='flex rounded-sm items-center text-sm bg-emerald-500 py-2 px-6 transition hover:bg-amber-600'
+						className='flex rounded-sm items-center text-sm bg-emerald-500 py-2 px-6 transition hover:bg-emerald-600'
 					>
 						Next{' '}
 						<i className='ri-arrow-right-s-line ri-lg ml-1'></i>

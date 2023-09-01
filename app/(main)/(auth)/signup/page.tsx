@@ -3,9 +3,7 @@
 import Input from '@/components/input'
 import routes from '@/configs/routes'
 import Link from 'next/link'
-import {
-	GoogleReCaptcha
-} from 'react-google-recaptcha-v3'
+import { GoogleReCaptcha } from 'react-google-recaptcha-v3'
 
 export default function Signup() {
 	return (
@@ -23,7 +21,7 @@ export default function Signup() {
 
 				<GoogleReCaptcha onVerify={console.log} />
 
-				<button className='!mt-10 transition hover:bg-amber-600 py-4 w-full rounded-full text-white bg-emerald-500'>
+				<button className='!mt-10 transition hover:bg-emerald-600 py-4 w-full rounded-full text-white bg-emerald-500'>
 					Đăng kí
 				</button>
 			</form>

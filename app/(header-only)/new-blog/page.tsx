@@ -90,7 +90,7 @@ export default function NewBlog() {
 				</div>
 
 				<div className='flex justify-end !mt-14'>
-					<button className='px-8 py-3 rounded-sm transition hover:bg-amber-600 bg-emerald-500'>
+					<button className='px-8 py-3 rounded-sm transition hover:bg-emerald-600 bg-emerald-500'>
 						Đăng bài viết
 					</button>
 				</div>

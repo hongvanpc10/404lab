@@ -19,7 +19,7 @@ export default function Login() {
 				/>
 				<Input placeholder='Nhập mật khẩu của bạn' type='password' />
 
-				<button className='!mt-10 transition hover:bg-amber-600 py-4 w-full rounded-full text-white bg-emerald-500'>
+				<button className='!mt-10 transition hover:bg-emerald-600 py-4 w-full rounded-full text-white bg-emerald-500'>
 					Đăng nhập
 				</button>
 			</form>

@@ -18,13 +18,13 @@ export default function Header() {
 			<div className='border-b border-emerald-500'>
 				<div className='container max-w-6xl text-sm flex items-center justify-between'>
 					<div className='flex items-center'>
-						<div className=' flex items-center space-x-3 text-gray-600'>
+						<div className='flex items-center space-x-3 text-gray-600'>
 							<i className='hover:text-emerald-500 ri-facebook-fill ri-lg transition' />
 							<i className='hover:text-emerald-500 ri-linkedin-fill ri-lg transition' />
 							<i className='hover:text-emerald-500 ri-github-fill ri-lg transition' />
 						</div>
 
-						<div className='bg-emerald-500 ml-3 [clip-path:polygon(0_0,90%_0,100%_100%,10%_100%)] py-4 px-8'>
+						<div className='bg-emerald-500 ml-3 [clip-path:polygon(0_0,calc(100%-1.5rem)_0,100%_100%,1.5rem_100%)] py-4 px-8'>
 							{moment()
 								.format('dddd, D [tháng] M, YYYY')
 								.split('')
@@ -88,7 +88,7 @@ export default function Header() {
 
 						<Link
 							href={routes.newBlog}
-							className='text-white ml-7 bg-emerald-500 w-9 h-9 transition hover:bg-amber-600 flex items-center justify-center rounded-full'
+							className='text-white ml-7 bg-emerald-500 w-9 h-9 transition hover:bg-emerald-600 flex items-center justify-center rounded-full'
 						>
 							<i className='ri-edit-box-line ri-lg'></i>
 						</Link>
