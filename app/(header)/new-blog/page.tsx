@@ -37,14 +37,14 @@ export default function NewBlog() {
 				<div>
 					<div className='flex items-center mb-6'>
 						<label className='text-lg inline-block'>Hình ảnh</label>
-						<div className='flex items-center ml-10 space-x-4 text-gray-400 text-sm'>
+						<div className='flex items-center ml-10 text-gray-400 text-sm'>
 							<Checkbox
 								value={0}
 								name='imageType'
 								checked={!imageType}
 								onChange={() => setImageType(0)}
 							/>
-							<span className='ml-2'>Tải lên</span>
+							<span className='ml-2 mr-4'>Tải lên</span>
 							<Checkbox
 								value={1}
 								name='imageType'
