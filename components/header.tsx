@@ -24,7 +24,7 @@ export default function Header() {
 							<i className='hover:text-emerald-500 ri-github-fill ri-lg transition' />
 						</div>
 
-						<div className='bg-emerald-500 ml-3 [clip-path:polygon(0_0,calc(100%-1.5rem)_0,100%_100%,1.5rem_100%)] py-4 px-8'>
+						<div className='bg-emerald-500 ml-3 [clip-path:polygon(0_0,calc(100%-1.5rem)_0,100%_100%,1.5rem_100%)] py-3.5 px-8'>
 							{moment()
 								.format('dddd, D [tháng] M, YYYY')
 								.split('')
