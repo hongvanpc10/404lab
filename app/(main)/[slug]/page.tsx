@@ -66,7 +66,7 @@ export default function BlogDetail() {
 				className='aspect-w-16 aspect-h-9'
 			/>
 
-			<div className='flex mt-10'>
+			<div className='flex mt-16'>
 				<div className='mr-6 w-9/12'>
 					<TextEditorViewer
 						content={
