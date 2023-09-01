@@ -19,7 +19,6 @@ export const extensions: Extensions = [
 	Highlight,
 	CodeBlockLowlight.configure({ lowlight }),
 	Image,
-	Link,
 	Table,
 	TableCell,
 	TableHeader,
@@ -29,7 +28,7 @@ export const extensions: Extensions = [
 
 export default function TextEditor() {
 	const editor = useEditor({
-		extensions,
+		extensions: [...extensions, Link.configure({ openOnClick: false })],
 		editorProps: {
 			attributes: {
 				class: 'prose prose-emerald bg-gray-900/50 outline-none p-5 min-h-[25rem] max-w-none',

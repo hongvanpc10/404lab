@@ -7,7 +7,7 @@ import py from 'highlight.js/lib/languages/python'
 import ts from 'highlight.js/lib/languages/typescript'
 import html from 'highlight.js/lib/languages/xml'
 import { lowlight } from 'lowlight'
-import { useCallback, useState } from 'react'
+import { useCallback, useRef, useState } from 'react'
 import Popover from '../popover'
 
 lowlight.registerLanguage('html', html)
@@ -17,37 +17,57 @@ lowlight.registerLanguage('py', py)
 lowlight.registerLanguage('ts', ts)
 
 export default function MenuBar({ editor }: { editor: Editor | null }) {
-	const [imageUrl, setImageUrl] = useState('')
-	const [url, setUrl] = useState('')
-	const [table, setTable] = useState<[number, number]>([3, 3])
+	const imageRef = useRef<HTMLInputElement>(null)
+	const urlRef = useRef<HTMLInputElement>(null)
+	const colsRef = useRef<HTMLInputElement>(null)
+	const rowsRef = useRef<HTMLInputElement>(null)
 
-	const addImage = useCallback(() => {
-		if (!editor || !imageUrl) return
-
-		editor.chain().focus().setImage({ src: imageUrl }).run()
-		setImageUrl('')
-	}, [editor, imageUrl])
-
-	const setLink = useCallback(() => {
-		if (!editor) return
-
-		if (url === null) {
-			return
+	const addImage = () => {
+		if (imageRef.current && editor && imageRef.current.value) {
+			editor
+				.chain()
+				.focus()
+				.setImage({ src: imageRef.current.value })
+				.run()
+			imageRef.current.value = ''
 		}
+	}
 
-		if (url === '') {
-			editor.chain().focus().extendMarkRange('link').unsetLink().run()
+	const setLink = () => {
+		if (editor && urlRef.current) {
+			const url = urlRef.current.value
 
-			return
+			if (url === '') {
+				editor.chain().focus().extendMarkRange('link').unsetLink().run()
+
+				return
+			}
+
+			editor
+				.chain()
+				.focus()
+				.extendMarkRange('link')
+				.setLink({ href: url })
+				.run()
+
+			urlRef.current.value = ''
 		}
+	}
 
-		editor
-			.chain()
-			.focus()
-			.extendMarkRange('link')
-			.setLink({ href: url })
-			.run()
-	}, [editor, url])
+	const addTable = () => {
+		if (editor && colsRef.current && rowsRef.current) {
+			const rows = Number(rowsRef.current.value)
+			const cols = Number(colsRef.current.value)
+
+			if (cols && rows) {
+				editor.commands.insertTable({
+					rows: rows,
+					cols: cols,
+					withHeaderRow: true,
+				})
+			}
+		}
+	}
 
 	if (!editor) return
 
@@ -231,8 +251,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 							placeholder='Nhập url hình ảnh'
 							autoFocus
 							className='bg-transparent px-4 w-64 outline-none text-sm'
-							value={imageUrl}
-							onChange={e => setImageUrl(e.target.value)}
+							ref={imageRef}
 						/>
 						<button
 							type='button'
@@ -262,8 +281,7 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 							placeholder='Nhập url'
 							autoFocus
 							className='bg-transparent px-4 w-64 outline-none text-sm'
-							value={url}
-							onChange={e => setUrl(e.target.value)}
+							ref={urlRef}
 						/>
 						<button
 							type='button'
@@ -293,36 +311,22 @@ export default function MenuBar({ editor }: { editor: Editor | null }) {
 							placeholder='Nhập số cột'
 							autoFocus
 							className='bg-transparent px-4 w-14 text-center outline-none text-sm'
-							value={table[0]}
-							onChange={e =>
-								setTable(prev => [
-									Number(e.target.value),
-									prev[1],
-								])
-							}
+							ref={colsRef}
+							defaultValue={3}
+							type='number'
 						/>
 						<i className='mx-2 ri-close-line text-gray-400'></i>
 						<input
 							placeholder='Nhập số dòng'
 							className='bg-transparent px-4 w-14 text-center outline-none text-sm'
-							value={table[1]}
-							onChange={e =>
-								setTable(prev => [
-									prev[0],
-									Number(e.target.value),
-								])
-							}
+							ref={rowsRef}
+							defaultValue={3}
+							type='number'
 						/>
 						<button
 							type='button'
 							className='text-sm text-emerald-500 py-1.5 px-4'
-							onClick={() =>
-								editor.commands.insertTable({
-									rows: table[1],
-									cols: table[0],
-									withHeaderRow: true,
-								})
-							}
+							onClick={addTable}
 						>
 							Tạo
 						</button>
