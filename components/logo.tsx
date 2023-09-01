@@ -10,7 +10,7 @@ export default function Logo() {
 		>
 			<span className='text-emerald-500'>404</span>
 			<span>Lab</span>
-			<span className='inline-block font-semibold px-1 text-xs ml-1 mt-1.5 bg-emerald-500'>
+			<span className='inline-block rounded-sm font-semibold px-1 text-xs ml-1 mt-1.5 bg-emerald-500'>
 				Blog
 			</span>
 		</Link>

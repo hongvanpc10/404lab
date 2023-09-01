@@ -8,7 +8,7 @@ export default function Checkbox(props: InputHTMLAttributes<HTMLInputElement>) {
 			<input type='checkbox' {...props} id={id} hidden className='peer' />
 			<label
 				htmlFor={id}
-				className='inline-flex items-center justify-center w-5 h-5 bg-gray-900 cursor-pointer after:content-[""] after:inline-block after:w-2.5 after:h-2.5 peer-checked:after:bg-emerald-500'
+				className='inline-flex rounded-sm after:rounded-[1px] items-center justify-center w-5 h-5 bg-gray-900 cursor-pointer after:content-[""] after:inline-block after:w-2.5 after:h-2.5 peer-checked:after:bg-emerald-500'
 			></label>
 		</div>
 	)
