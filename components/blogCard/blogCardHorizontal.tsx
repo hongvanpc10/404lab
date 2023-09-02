@@ -1,6 +1,7 @@
 import moment from 'moment'
 import Link from 'next/link'
 import Image from '../image'
+import routes from '@/configs/routes'
 
 export default function BlogCardHorizontal() {
 	return (
@@ -20,14 +21,20 @@ export default function BlogCardHorizontal() {
 				</p>
 
 				<div className='flex items-center mt-4'>
-					<Image
-						alt=''
-						src='https://statics.cdn.200lab.io/2022/12/Thumbnails-Blog--2-.png?auto=format,compress&width=1500'
-						className='w-9 h-9 rounded-full'
-					/>
+					<Link href={routes.blogsByAuthor.gen('sdcfdsefe')}>
+						<Image
+							alt=''
+							src='https://statics.cdn.200lab.io/2022/12/Thumbnails-Blog--2-.png?auto=format,compress&width=1500'
+							className='w-9 h-9 rounded-full'
+						/>
+					</Link>
 
 					<div className='ml-3'>
-						<h3 className='text-emerald-500'>Hồng Văn</h3>
+						<h3 className='text-emerald-500'>
+							<Link href={routes.blogsByAuthor.gen('sdcfdsefe')}>
+								Hồng Văn
+							</Link>
+						</h3>
 						<div className='flex items-center mb-2 text-xs text-gray-400'>
 							{moment().format('D [Thg] M, YYYY')}
 							<div className='w-1 h-1 rounded-full bg-current mx-2' />
@@ -37,7 +44,7 @@ export default function BlogCardHorizontal() {
 				</div>
 			</div>
 
-			<Link href={''} className='col-span-2'>
+			<Link href={'/dfergre'} className='col-span-2'>
 				<Image
 					alt=''
 					src='https://statics.cdn.200lab.io/2022/11/web-development-la--gi--.png'

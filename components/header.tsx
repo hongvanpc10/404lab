@@ -98,43 +98,52 @@ export default function Header() {
 
 			<div className='bg-gray-900'>
 				<div className='container max-w-6xl'>
-					<nav className='flex w-full no-scrollbar whitespace-nowrap overflow-x-auto overflow-y-hidden space-x-3 items-center mx-auto text-gray-400'>
-						{[
-							{ name: 'home', href: '/' },
-							{ name: 'Chung', href: '/tag/all' },
-							{ name: 'javascript', href: '/tag/javascript' },
-							{ name: 'python', href: '/tag/python' },
-							{ name: 'data', href: '/tag/data' },
-							{ name: 'devops', href: '/tag/devops' },
-							{ name: 'frontend', href: '/tag/frontend' },
-							{ name: 'backend', href: '/tag/backend' },
-							{ name: 'flutter', href: '/tag/flutter' },
-							{ name: 'tài liệu', href: '/tag/resources' },
-							{
-								name: 'tips & tricks',
-								href: '/tag/tips-and-tricks',
-							},
-							{ name: 'news', href: '/tag/news' },
-							{ name: 'windows', href: '/tag/windows' },
-							{ name: 'macos', href: '/tag/macos' },
-							{ name: 'phần mềm', href: '/tag/softwares' },
-						].map(({ name, href }, index) => {
-							const isActive = pathname === href
-
-							return (
-								<Link
-									key={index}
-									href={href}
-									className={`pb-4 pt-5 px-2 hover:text-emerald-500 inline-block border-b-4 border-transparent transition ${
-										isActive &&
-										'text-emerald-500 !border-emerald-500'
-									}`}
-								>
-									{name.toUpperCase()}
-								</Link>
-							)
-						})}
-					</nav>
+				<nav className='flex items-center'>
+						<Link
+							href={routes.home}
+							className={`pb-4 pt-5 px-2 mr-4 hover:text-emerald-500 inline-block border-b-4 border-transparent transition ${
+								pathname === '/' && 'text-emerald-500 !border-emerald-500'
+							}`}
+						>
+							HOME
+						</Link>
+						<div className='flex no-scrollbar whitespace-nowrap overflow-x-auto overflow-y-hidden space-x-3 items-center text-gray-400'>
+							{[
+								{ name: 'Chung', href: '/tag/all' },
+								{ name: 'javascript', href: '/tag/javascript' },
+								{ name: 'python', href: '/tag/python' },
+								{ name: 'data', href: '/tag/data' },
+								{ name: 'devops', href: '/tag/devops' },
+								{ name: 'frontend', href: '/tag/frontend' },
+								{ name: 'backend', href: '/tag/backend' },
+								{ name: 'flutter', href: '/tag/flutter' },
+								{ name: 'tài liệu', href: '/tag/resources' },
+								{
+									name: 'tips & tricks',
+									href: '/tag/tips-and-tricks',
+								},
+								{ name: 'news', href: '/tag/news' },
+								{ name: 'windows', href: '/tag/windows' },
+								{ name: 'macos', href: '/tag/macos' },
+								{ name: 'phần mềm', href: '/tag/softwares' },
+							].map(({ name, href }, index) => {
+								const isActive = pathname === href
+	
+								return (
+									<Link
+										key={index}
+										href={href}
+										className={`pb-4 pt-5 px-2 hover:text-emerald-500 inline-block border-b-4 border-transparent transition ${
+											isActive &&
+											'text-emerald-500 !border-emerald-500'
+										}`}
+									>
+										{name.toUpperCase()}
+									</Link>
+								)
+							})}
+						</div>
+				</nav>
 				</div>
 			</div>
 		</header>

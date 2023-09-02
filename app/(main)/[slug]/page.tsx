@@ -30,7 +30,7 @@ export default function BlogDetail() {
 				<div className='flex items-center justify-between mt-4 text-sm text-gray-400'>
 					<div className='flex items-center'>
 						Đăng bởi
-						<Link href={''} className='text-emerald-500 ml-1.5'>
+						<Link href={routes.blogsByAuthor.gen('edfewf')} className='text-emerald-500 ml-1.5'>
 							Hồng Văn
 						</Link>
 						<span className='mx-2.5'>|</span>
@@ -118,19 +118,56 @@ export default function BlogDetail() {
 						</div>
 
 						<div className='grid grid-cols-3 bg-gray-900'>
-							<Image
-								alt=''
-								src='https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGFwdG9wfGVufDB8fDB8fHww&w=1000&q=80'
-								className='aspect-w-14 aspect-h-16'
-							/>
+							<Link href={routes.blogsByAuthor.gen('sdcfdsefe')}>
+								<Image
+									alt=''
+									src='https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGFwdG9wfGVufDB8fDB8fHww&w=1000&q=80'
+									className='aspect-w-14 aspect-h-16'
+								/>
+							</Link>
 
-							<div className='col-span-2 p-4'>
+							<div className='col-span-2 p-3'>
 								<h2 className='text-lg font-bold'>
-									<Link href={''}>Hong Van</Link>
+									<Link
+										href={routes.blogsByAuthor.gen(
+											'sdcfdsefe'
+										)}
+									>
+										Hong Van
+									</Link>
 								</h2>
-								<p className='mt-2 text-[0.9375rem] text-gray-300'>
+								<p className='mt-1 text-[0.9375rem] text-gray-300'>
 									make impossible to possible
 								</p>
+								<div className='text-gray-400 text-sm mt-2'>
+									<span>Follow me:</span>
+									<div className='flex items-center text-base space-x-2 ml-3'>
+										<Link
+											href={''}
+											className='transition hover:text-emerald-500'
+										>
+											<i className='ri-facebook-circle-fill'></i>
+										</Link>
+										<Link
+											href={''}
+											className='transition hover:text-emerald-500'
+										>
+											<i className='ri-linkedin-box-fill'></i>
+										</Link>
+										<Link
+											href={''}
+											className='transition hover:text-emerald-500'
+										>
+											<i className='ri-youtube-fill'></i>
+										</Link>
+										<Link
+											href={''}
+											className='transition hover:text-emerald-500'
+										>
+											<i className='ri-earth-fill'></i>
+										</Link>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
