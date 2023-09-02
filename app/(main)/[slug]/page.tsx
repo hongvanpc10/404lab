@@ -30,7 +30,10 @@ export default function BlogDetail() {
 				<div className='flex items-center justify-between mt-4 text-sm text-gray-400'>
 					<div className='flex items-center'>
 						Đăng bởi
-						<Link href={routes.blogsByAuthor.gen('edfewf')} className='text-emerald-500 ml-1.5'>
+						<Link
+							href={routes.blogsByAuthor('edfewf')}
+							className='text-emerald-500 ml-1.5'
+						>
 							Hồng Văn
 						</Link>
 						<span className='mx-2.5'>|</span>
@@ -118,7 +121,7 @@ export default function BlogDetail() {
 						</div>
 
 						<div className='grid grid-cols-3 bg-gray-900'>
-							<Link href={routes.blogsByAuthor.gen('sdcfdsefe')}>
+							<Link href={routes.blogsByAuthor('sdcfdsefe')}>
 								<Image
 									alt=''
 									src='https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGFwdG9wfGVufDB8fDB8fHww&w=1000&q=80'
@@ -129,9 +132,7 @@ export default function BlogDetail() {
 							<div className='col-span-2 p-3'>
 								<h2 className='text-lg font-bold'>
 									<Link
-										href={routes.blogsByAuthor.gen(
-											'sdcfdsefe'
-										)}
+										href={routes.blogsByAuthor('sdcfdsefe')}
 									>
 										Hong Van
 									</Link>

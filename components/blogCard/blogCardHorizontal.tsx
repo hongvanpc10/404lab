@@ -21,7 +21,7 @@ export default function BlogCardHorizontal() {
 				</p>
 
 				<div className='flex items-center mt-4'>
-					<Link href={routes.blogsByAuthor.gen('sdcfdsefe')}>
+					<Link href={routes.blogsByAuthor('sdcfdsefe')}>
 						<Image
 							alt=''
 							src='https://statics.cdn.200lab.io/2022/12/Thumbnails-Blog--2-.png?auto=format,compress&width=1500'
@@ -31,7 +31,7 @@ export default function BlogCardHorizontal() {
 
 					<div className='ml-3'>
 						<h3 className='text-emerald-500'>
-							<Link href={routes.blogsByAuthor.gen('sdcfdsefe')}>
+							<Link href={routes.blogsByAuthor('sdcfdsefe')}>
 								Hồng Văn
 							</Link>
 						</h3>
