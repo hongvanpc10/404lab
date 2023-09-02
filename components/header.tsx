@@ -55,7 +55,10 @@ export default function Header() {
 
 						<Menu
 							items={[
-								{ label: 'Tài khoản của tôi' },
+								{
+									label: 'Tài khoản của tôi',
+									href: routes.account,
+								},
 								{ label: 'Bài viết của tôi' },
 								{ label: 'Đăng xuất' },
 							]}
@@ -98,11 +101,12 @@ export default function Header() {
 
 			<div className='bg-gray-900'>
 				<div className='container max-w-6xl'>
-				<nav className='flex items-center'>
+					<nav className='flex items-center'>
 						<Link
 							href={routes.home}
 							className={`pb-4 pt-5 px-2 mr-4 hover:text-emerald-500 inline-block border-b-4 border-transparent transition ${
-								pathname === '/' && 'text-emerald-500 !border-emerald-500'
+								pathname === '/' &&
+								'text-emerald-500 !border-emerald-500'
 							}`}
 						>
 							HOME
@@ -128,7 +132,7 @@ export default function Header() {
 								{ name: 'phần mềm', href: '/tag/softwares' },
 							].map(({ name, href }, index) => {
 								const isActive = pathname === href
-	
+
 								return (
 									<Link
 										key={index}
@@ -143,7 +147,7 @@ export default function Header() {
 								)
 							})}
 						</div>
-				</nav>
+					</nav>
 				</div>
 			</div>
 		</header>
