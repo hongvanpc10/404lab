@@ -1,5 +1,6 @@
 'use client'
 
+import { RECAPTCHA_KEY } from '@/configs/environment'
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3'
 
 export default function MainLayout({
@@ -8,10 +9,7 @@ export default function MainLayout({
 	children: React.ReactNode
 }) {
 	return (
-		<GoogleReCaptchaProvider
-			reCaptchaKey='6Ld9UOonAAAAACT5CcVofLXY-S7NgGcZmOXDDv6y'
-			language='vi'
-		>
+		<GoogleReCaptchaProvider reCaptchaKey={RECAPTCHA_KEY} language='vi'>
 			{children}
 		</GoogleReCaptchaProvider>
 	)

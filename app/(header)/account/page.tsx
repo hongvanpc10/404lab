@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function Account() {
 	return (
-		<div className='grid grid-cols-12 max-w-5xl mx-auto gap-8'>
+		<div className='grid grid-cols-12 max-w-5xl mx-auto gap-10'>
 			<div className='col-span-4'>
 				<div className='bg-gray-900'>
 					<div className='relative'>
