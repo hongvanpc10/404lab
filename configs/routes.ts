@@ -1,11 +1,11 @@
 const routes = {
-	home: '/',
-	signup: '/signup',
-	login: '/login',
-	forum: 'https://forum.404lab.site',
-	newBlog: '/new-blog',
-	blogsByAuthor: (slug: string) => '/author/' + slug,
-	account: '/account',
-}
+  home: '/',
+  signup: '/sign-up',
+  login: '/sign-in',
+  forum: 'https://forum.404lab.site',
+  newBlog: '/new-blog',
+  blogsByAuthor: (slug: string) => '/author/' + slug,
+  account: '/account',
+};
 
-export default routes
+export default routes;

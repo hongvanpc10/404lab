@@ -1,1 +1,4 @@
-export const RECAPTCHA_KEY = `${process.env.NEXT_PUBLIC_RECAPTCHA_KEY}`
+export const RECAPTCHA_KEY = `${process.env.NEXT_PUBLIC_RECAPTCHA_KEY}`;
+export const API_BASE_URL = `${process.env.NEXT_PUBLIC_API_BASE_URL}`;
+export const CLOUDINARY_UPLOAD_PRESET = `${process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET}`;
+export const CLOUDINARY_UPLOAD_URL = `${process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_URL}`;
