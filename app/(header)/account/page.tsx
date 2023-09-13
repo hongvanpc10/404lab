@@ -22,8 +22,6 @@ export default function Account() {
     handleSubmit,
     reset,
     formState: { errors },
-    setValue,
-    watch,
   } = useForm<UpdateUserDto>();
 
   useProtectedRoute();
@@ -77,15 +75,12 @@ export default function Account() {
         <div className="col-span-4">
           <div className="bg-gray-900">
             <div className="relative">
-              {
-                <Image
-                  alt=""
-                  src={
-                    avatarFile ? URL.createObjectURL(avatarFile) : user.avatar
-                  }
-                  className="w-full aspect-w-16 aspect-h-12"
-                />
-              }
+              <Image
+                alt=""
+                src={avatarFile ? URL.createObjectURL(avatarFile) : user.avatar}
+                className="w-full aspect-w-16 aspect-h-12"
+              />
+
               <input
                 hidden
                 type="file"
