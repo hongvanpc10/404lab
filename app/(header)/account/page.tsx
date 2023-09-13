@@ -40,7 +40,7 @@ export default function Account() {
         name: user?.name,
       });
     }
-  }, [user]);
+  }, [user, reset]);
 
   const { mutate } = useMutation(
     (data: UpdateUserDto) =>
