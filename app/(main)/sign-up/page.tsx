@@ -5,6 +5,7 @@ import authService from '@/apiServices/auth';
 import { SignUpDto } from '@/apiServices/auth/interfaces';
 import FormError from '@/components/formError';
 import Input from '@/components/input';
+import Loader from '@/components/loader';
 import pattern from '@/configs/pattern';
 import routes from '@/configs/routes';
 import { useMutation } from '@tanstack/react-query';
@@ -24,7 +25,7 @@ export default function SignUp() {
     setFocus,
   } = useForm<SignUpDto>();
 
-  const { mutate } = useMutation(authService.signUp, {
+  const { mutate, isLoading } = useMutation(authService.signUp, {
     onSuccess({ email }) {
       router.push(routes.login + '?email=' + email);
     },
@@ -40,6 +41,8 @@ export default function SignUp() {
 
   return (
     <div className="flex flex-col items-center">
+      {isLoading && <Loader />}
+
       <h1 className="text-3xl mb-4 font-bold">Đăng kí thành viên 404Lab</h1>
       <p className="text-[0.9375rem] text-gray-300 mb-10">
         200Lab - Chia sẻ kỹ thuật lập trình

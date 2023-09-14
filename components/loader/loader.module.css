@@ -1,0 +1,24 @@
+.loader {
+  position: relative;
+}
+.loader:after {
+  content: '';
+  background: theme('colors.emerald.500');
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.25rem;
+  transform-origin: -1rem -2rem;
+  animation: rotate 1s linear infinite;
+}
+@keyframes rotate {
+  0%,
+  100% {
+    transform: rotate(-45deg) translate(-50%, -50%);
+  }
+  50% {
+    transform: rotate(-245deg) translate(-50%, -50%);
+  }
+}

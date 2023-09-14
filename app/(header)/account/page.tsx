@@ -2,8 +2,10 @@
 
 import usersService from '@/apiServices/users';
 import { UpdateUserDto } from '@/apiServices/users/interface';
+import FormError from '@/components/formError';
 import Image from '@/components/image';
 import Input from '@/components/input';
+import Loader from '@/components/loader';
 import useAuth from '@/hooks/useAuth';
 import useProtectedRoute from '@/hooks/useProtectedRoute';
 import uploadImage from '@/utils/uploadImage';
@@ -40,7 +42,7 @@ export default function Account() {
     }
   }, [user, reset]);
 
-  const { mutate } = useMutation(
+  const { mutate, isLoading } = useMutation(
     (data: UpdateUserDto) =>
       usersService.updateUser(`${user?._id}`, data, `${accessToken}`),
     {
@@ -72,6 +74,8 @@ export default function Account() {
         noValidate
         className="grid grid-cols-12 max-w-5xl mx-auto gap-10"
       >
+        {isLoading && <Loader />}
+
         <div className="col-span-4">
           <div className="bg-gray-900">
             <div className="relative">
@@ -155,6 +159,9 @@ export default function Account() {
                   required: 'Tên hiển thị không được để trống',
                 })}
               />
+              {errors.name?.message && (
+                <FormError>{errors.name.message}</FormError>
+              )}
             </div>
             <div>
               <label className="text-lg mb-2 inline-block">Giới thiệu</label>

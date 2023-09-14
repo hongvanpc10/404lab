@@ -5,6 +5,7 @@ import authService from '@/apiServices/auth';
 import { SignInDto } from '@/apiServices/auth/interfaces';
 import FormError from '@/components/formError';
 import Input from '@/components/input';
+import Loader from '@/components/loader';
 import pattern from '@/configs/pattern';
 import routes from '@/configs/routes';
 import useAuth from '@/hooks/useAuth';
@@ -32,7 +33,7 @@ export default function SignIn() {
     defaultValues: { email: searchParams.get('email') || '' },
   });
 
-  const { mutate } = useMutation(authService.signIn, {
+  const { mutate, isLoading } = useMutation(authService.signIn, {
     onSuccess(data) {
       setAuth(data);
       localStorage.setItem('isSignIn', 'true');
@@ -59,6 +60,8 @@ export default function SignIn() {
 
   return (
     <div className="flex flex-col items-center">
+      {isLoading && <Loader />}
+
       <h1 className="text-3xl mb-4 font-bold">Welcome back!</h1>
       <p className="text-[0.9375rem] text-gray-300 mb-10">
         Hãy đăng nhập để có được quyền lợi của thành viên
