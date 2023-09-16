@@ -96,7 +96,7 @@ export default function BlogDetail() {
         <Image alt="" src={data.thumb} className="aspect-w-16 aspect-h-9" />
 
         <div className="flex mt-16">
-          <div className="mr-6 w-9/12">
+          <div className="mr-8 w-9/12">
             <TextEditorViewer content={data.content} />
           </div>
 
