@@ -27,16 +27,15 @@ export default function BlogDetail() {
   const [toc, setToc] = useState<TocItem[]>([]);
 
   useEffect(() => {
-    if (data?.content) {
+    if (data) {
       document.querySelectorAll('.prose h2, .prose h3').forEach((heading) => {
         if (heading.textContent) {
           heading.id = slugify(heading.textContent);
         }
       });
-
       setToc(generateToc(data.content));
     }
-  }, [data?.content]);
+  }, [data]);
 
   if (isError) return <NotFound />;
 

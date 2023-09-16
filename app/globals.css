@@ -3,34 +3,34 @@
 @tailwind utilities;
 
 @layer components {
-	.no-scrollbar::-webkit-scrollbar {
-		display: none;
-	}
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 
-	.no-scrollbar {
-		-ms-overflow-style: none;
-		scrollbar-width: none;
-	}
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
 
 @layer base {
-	input::-webkit-outer-spin-button,
-	input::-webkit-inner-spin-button {
-		-webkit-appearance: none;
-		margin: 0;
-	}
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 
-	input[type='number'] {
-		-moz-appearance: textfield;
-	}
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
 
-	div[data-youtube-video],
-	div.iframe-wrapper {
-		@apply relative w-full pt-[56.25%];
-	}
+  div[data-youtube-video],
+  div.iframe-wrapper {
+    @apply relative w-full pt-[56.25%];
+  }
 
-	div[data-youtube-video] iframe,
-	div.iframe-wrapper iframe {
-		@apply absolute w-full h-full inset-0;
-	}
+  div[data-youtube-video] iframe,
+  div.iframe-wrapper iframe {
+    @apply absolute w-full h-full inset-0;
+  }
 }
