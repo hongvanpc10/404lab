@@ -6,6 +6,8 @@ const routes = {
   newBlog: '/new-blog',
   blogsByAuthor: (slug: string) => '/author/' + slug,
   account: '/account',
+  blogDetail: (slug: string) => '/' + slug,
+  blogsByTag: (slug: string) => '/tag/' + slug,
 };
 
 export default routes;

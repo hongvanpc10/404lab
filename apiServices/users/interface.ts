@@ -14,6 +14,7 @@ export interface User {
   github: string;
   linkedin: string;
   website: string;
+  slug: string;
 }
 
 export interface UpdateUserDto {

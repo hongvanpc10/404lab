@@ -1,24 +1,18 @@
 .loader {
+  width: 3rem;
+  height: 3rem;
+  display: inline-block;
   position: relative;
-}
-.loader:after {
-  content: '';
   background: theme('colors.emerald.500');
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 0.25rem;
-  transform-origin: -1rem -2rem;
-  animation: rotate 1s linear infinite;
+  box-sizing: border-box;
+  animation: zeroRotation 1s ease infinite alternate-reverse;
 }
-@keyframes rotate {
-  0%,
-  100% {
-    transform: rotate(-45deg) translate(-50%, -50%);
+
+@keyframes zeroRotation {
+  0% {
+    transform: scale(1) rotate(0deg);
   }
-  50% {
-    transform: rotate(-245deg) translate(-50%, -50%);
+  100% {
+    transform: scale(0) rotate(360deg);
   }
 }

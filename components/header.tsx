@@ -10,8 +10,10 @@ import Image from './image';
 import Menu from './menu';
 import Search from './search';
 import useAuth from '@/hooks/useAuth';
-import { useMutation } from '@tanstack/react-query';
+import { useMutation, useQuery } from '@tanstack/react-query';
 import authService from '@/apiServices/auth';
+import queryKeys from '@/configs/queryKeys';
+import tagsService from '@/apiServices/tags';
 
 export default function Header() {
   const pathname = usePathname();
@@ -22,6 +24,8 @@ export default function Header() {
       localStorage.removeItem('isSignIn');
     },
   });
+
+  const { data: tags } = useQuery(queryKeys.tags, tagsService.getAllTags);
 
   return (
     <header>
@@ -134,41 +138,26 @@ export default function Header() {
             >
               HOME
             </Link>
-            <div className="flex no-scrollbar whitespace-nowrap overflow-x-auto overflow-y-hidden space-x-3 items-center text-gray-400">
-              {[
-                { name: 'Chung', href: '/tag/all' },
-                { name: 'javascript', href: '/tag/javascript' },
-                { name: 'python', href: '/tag/python' },
-                { name: 'data', href: '/tag/data' },
-                { name: 'devops', href: '/tag/devops' },
-                { name: 'frontend', href: '/tag/frontend' },
-                { name: 'backend', href: '/tag/backend' },
-                { name: 'flutter', href: '/tag/flutter' },
-                { name: 'tài liệu', href: '/tag/resources' },
-                {
-                  name: 'tips & tricks',
-                  href: '/tag/tips-and-tricks',
-                },
-                { name: 'news', href: '/tag/news' },
-                { name: 'windows', href: '/tag/windows' },
-                { name: 'macos', href: '/tag/macos' },
-                { name: 'phần mềm', href: '/tag/softwares' },
-              ].map(({ name, href }, index) => {
-                const isActive = pathname === href;
 
-                return (
-                  <Link
-                    key={index}
-                    href={href}
-                    className={`pb-4 pt-5 px-2 hover:text-emerald-500 inline-block border-b-4 border-transparent transition ${
-                      isActive && 'text-emerald-500 !border-emerald-500'
-                    }`}
-                  >
-                    {name.toUpperCase()}
-                  </Link>
-                );
-              })}
-            </div>
+            {tags && (
+              <div className="flex no-scrollbar whitespace-nowrap overflow-x-auto overflow-y-hidden space-x-3 items-center text-gray-400">
+                {[{ name: 'Chung', slug: 'all' }, ...tags].map((tag, index) => {
+                  const isActive = pathname === routes.blogsByTag(tag.slug);
+
+                  return (
+                    <Link
+                      key={index}
+                      href={routes.blogsByTag(tag.slug)}
+                      className={`pb-4 pt-5 px-2 hover:text-emerald-500 inline-block border-b-4 border-transparent transition ${
+                        isActive && 'text-emerald-500 !border-emerald-500'
+                      }`}
+                    >
+                      {tag.name.toUpperCase()}
+                    </Link>
+                  );
+                })}
+              </div>
+            )}
           </nav>
         </div>
       </div>
