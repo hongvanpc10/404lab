@@ -221,10 +221,10 @@ export default function BlogDetail() {
             <Title>Bài viết liên quan</Title>
 
             <div className="space-y-8">
+              {/* <BlogCardHorizontal data={}/>
               <BlogCardHorizontal />
               <BlogCardHorizontal />
-              <BlogCardHorizontal />
-              <BlogCardHorizontal />
+              <BlogCardHorizontal /> */}
             </div>
           </div>
         </div>
