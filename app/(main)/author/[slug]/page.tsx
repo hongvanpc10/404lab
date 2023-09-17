@@ -54,12 +54,12 @@ export default function BlogsByTag() {
       </div>
 
       <div className="mt-16 space-y-8">
+        {/* <BlogCardHorizontal />
         <BlogCardHorizontal />
         <BlogCardHorizontal />
         <BlogCardHorizontal />
         <BlogCardHorizontal />
-        <BlogCardHorizontal />
-        <BlogCardHorizontal />
+        <BlogCardHorizontal /> */}
       </div>
 
       <div className="mt-20 grid grid-cols-3">
