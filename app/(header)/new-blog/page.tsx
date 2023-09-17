@@ -8,6 +8,7 @@ import Checkbox from '@/components/checkbox';
 import FormError from '@/components/formError';
 import Image from '@/components/image';
 import Input from '@/components/input';
+import Loader from '@/components/loader';
 import MultipleSelect from '@/components/multipleSelect';
 import TextEditor from '@/components/textEditor';
 import Textarea from '@/components/textarea';
@@ -43,7 +44,7 @@ export default function NewBlog() {
 
   const router = useRouter();
 
-  const { mutate } = useMutation(
+  const { mutate, isLoading } = useMutation(
     (dto: CreateBlogDto) => blogsService.createBlog(dto, `${accessToken}`),
     {
       onSuccess({ slug }) {
@@ -85,6 +86,8 @@ export default function NewBlog() {
 
   return (
     <div className="flex flex-col items-center mx-auto max-w-5xl">
+      {isLoading && <Loader />}
+
       <h1 className="text-3xl mb-4 font-bold">Tạo bài viết mới trên 404Lab</h1>
       <p className="text-[0.9375rem] text-gray-300 mb-10">
         Chia sẻ ý tưởng, kiến thức, kinh nghiệm của bạn cho mọi người
