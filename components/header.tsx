@@ -57,7 +57,7 @@ export default function Header() {
             {!user && (
               <>
                 <Link
-                  href={routes.login}
+                  href={routes.login + '?continue=' + pathname}
                   className="transition hover:text-emerald-500"
                 >
                   Đăng nhập
