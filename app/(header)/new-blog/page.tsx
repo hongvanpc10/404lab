@@ -113,7 +113,11 @@ export default function NewBlog() {
             Mô tả
             <small className="text-gray-400 ml-1 text-sm">(Optional)</small>
           </label>
-          <Textarea rows={4} placeholder="Nhập mô tả bài viết" />
+          <Textarea
+            rows={4}
+            placeholder="Nhập mô tả bài viết"
+            {...register('description')}
+          />
         </div>
 
         {tags && (

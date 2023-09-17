@@ -8,6 +8,7 @@ const routes = {
   account: '/account',
   blogDetail: (slug: string) => '/' + slug,
   blogsByTag: (slug: string) => '/tag/' + slug,
+  allBlogs: '/all',
 };
 
 export default routes;

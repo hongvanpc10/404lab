@@ -10,11 +10,7 @@ import Link from 'next/link';
 import { useParams, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
-export default function BlogsByTag() {
-  const { data: tags } = useQuery(queryKeys.tags, () =>
-    tagsService.getAllTags(),
-  );
-
+export default function AllBlogs() {
   const [page, setPage] = useState(1);
 
   const params = useParams();
@@ -24,27 +20,21 @@ export default function BlogsByTag() {
     setPage(Number(searchParams.get('page')) || 1);
   }, [searchParams]);
 
-  const tag = tags?.find((tag) => tag.slug === params.tag);
-
-  const { data: blogs } = useQuery(
-    queryKeys.blogsByTag(`${tag?._id}`, { page }),
-    () => blogsService.getBlogsByTag(`${tag?._id}`, { page }),
-    { enabled: !!tag },
+  const { data: blogs } = useQuery(queryKeys.blogs({ page }), () =>
+    blogsService.getBlogs({ page }),
   );
-
-  if (!tag) return <NotFound />;
 
   return (
     blogs && (
       <div className="max-w-3xl mx-auto">
         <div className="flex items-center justify-center flex-col py-14 bg-gray-900">
-          <h1 className="text-3xl font-bold">{tag?.name.toUpperCase()}</h1>
+          <h1 className="text-3xl font-bold">TẤT CẢ</h1>
           <div className="flex items-center mt-6 mb-4 text-gray-300">
             <i className="ri-edit-box-line mr-2 ri-lg"></i>
             {blogs.total || 0} bài viết
           </div>
           <p className=" text-gray-300">
-            Tổng hợp các bài viết chia sẻ kỹ thuật lập trình về {tag?.name}
+            Tổng hợp các bài viết chia sẻ kỹ thuật lập trình
           </p>
         </div>
 

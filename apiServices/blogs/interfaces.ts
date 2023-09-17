@@ -17,4 +17,5 @@ export interface Blog {
   tags: Tag[];
   author: User;
   createdAt: string;
+  slug: string;
 }
