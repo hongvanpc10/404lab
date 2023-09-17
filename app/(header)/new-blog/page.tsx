@@ -164,23 +164,14 @@ export default function NewBlog() {
 
           {imageType ? (
             <div>
-              <div className="flex">
-                <Input
-                  type="url"
-                  autoFocus
-                  placeholder="Nhập url hình ảnh thumbnail"
-                  {...register('thumb', {
-                    required: 'Vui lòng nhập url thumbnail bài viết',
-                  })}
-                />
-
-                <button
-                  type="button"
-                  className="text-emerald-500 whitespace-nowrap py-2 px-4"
-                >
-                  Load
-                </button>
-              </div>
+              <Input
+                type="url"
+                autoFocus
+                placeholder="Nhập url hình ảnh thumbnail"
+                {...register('thumb', {
+                  required: 'Vui lòng nhập url thumbnail bài viết',
+                })}
+              />
 
               {errors.thumb?.message && (
                 <FormError>{errors.thumb.message}</FormError>
