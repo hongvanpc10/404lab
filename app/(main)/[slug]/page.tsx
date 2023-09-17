@@ -133,20 +133,20 @@ export default function BlogDetail() {
                   <Image
                     alt=""
                     src={data.author.avatar}
-                    className="aspect-w-14 aspect-h-16"
+                    className="aspect-w-14 h-full aspect-h-16"
                   />
                 </Link>
 
-                <div className="col-span-2 p-3">
+                <div className="col-span-2 px-3 py-2">
                   <h2 className="text-lg font-bold">
-                    <Link href={routes.blogsByAuthor('sdcfdsefe')}>
+                    <Link href={routes.blogsByAuthor(data.author.slug)}>
                       {data.author.name}
                     </Link>
                   </h2>
                   <p className="mt-1 text-[0.9375rem] text-gray-300">
                     {data.author.bio}
                   </p>
-                  <div className="text-gray-400 text-sm mt-2">
+                  <div className="text-gray-400 text-sm mt-1">
                     <span>Follow me:</span>
                     <div className="flex items-center text-base space-x-2 ml-3">
                       {data.author.facebook && (
