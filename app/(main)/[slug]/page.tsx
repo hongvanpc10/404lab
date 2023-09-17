@@ -28,12 +28,21 @@ export default function BlogDetail() {
 
   useEffect(() => {
     if (data) {
-      document.querySelectorAll('.prose h2, .prose h3').forEach((heading) => {
-        if (heading.textContent) {
-          heading.id = slugify(heading.textContent);
-        }
-      });
+      const handleNodeInserted = (e: Event) => {
+        document.querySelectorAll('.prose h2, .prose h3').forEach((heading) => {
+          if (heading.textContent) {
+            heading.id = slugify(heading.textContent);
+          }
+        });
+      };
+
+      document.addEventListener('DOMNodeInserted', handleNodeInserted);
+
       setToc(generateToc(data.content));
+
+      return () => {
+        document.removeEventListener('DOMNodeInserted', handleNodeInserted);
+      };
     }
   }, [data]);
 
