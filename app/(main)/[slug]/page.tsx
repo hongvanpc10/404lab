@@ -24,6 +24,12 @@ export default function BlogDetail() {
     blogsService.getBlogDetail(slug),
   );
 
+  const { data: authorBlogs } = useQuery(
+    queryKeys.blogsByUser(`${data?.author._id}`, { limit: 4 }),
+    () => blogsService.getBlogsByUser(`${data?.author._id}`, { limit: 4 }),
+    { enabled: !!data },
+  );
+
   const [toc, setToc] = useState<TocItem[]>([]);
 
   useEffect(() => {
@@ -45,6 +51,8 @@ export default function BlogDetail() {
       };
     }
   }, [data]);
+
+  console.log(data?.author._id);
 
   if (isError) return <NotFound />;
 
@@ -217,16 +225,19 @@ export default function BlogDetail() {
             </form>
           </div>
 
-          <div>
-            <Title>Bài viết liên quan</Title>
+          {authorBlogs && (
+            <div>
+              <Title>Bài viết liên quan</Title>
 
-            <div className="space-y-8">
-              {/* <BlogCardHorizontal data={}/>
-              <BlogCardHorizontal />
-              <BlogCardHorizontal />
-              <BlogCardHorizontal /> */}
+              <div className="space-y-8">
+                {authorBlogs.data
+                  .filter((blog) => blog._id !== data._id)
+                  .map((blog, index) => (
+                    <BlogCardHorizontal key={index} data={blog} />
+                  ))}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     )

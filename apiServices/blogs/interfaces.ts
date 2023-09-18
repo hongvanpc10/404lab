@@ -18,4 +18,5 @@ export interface Blog {
   author: User;
   createdAt: string;
   slug: string;
+  _id: string;
 }

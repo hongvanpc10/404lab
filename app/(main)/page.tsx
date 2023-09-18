@@ -9,8 +9,8 @@ import routes from '@/configs/routes';
 import { useQueries, useQuery } from '@tanstack/react-query';
 
 export default function Home() {
-  const { data: blogs } = useQuery(queryKeys.blogs({ limit: 6 }), () =>
-    blogsService.getBlogs({ limit: 6 }),
+  const { data: blogs } = useQuery(queryKeys.blogs({ limit: 9 }), () =>
+    blogsService.getBlogs({ limit: 9 }),
   );
 
   const { data: tags } = useQuery(queryKeys.tags, () =>

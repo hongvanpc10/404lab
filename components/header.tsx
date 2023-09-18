@@ -78,7 +78,10 @@ export default function Header() {
                     label: 'Tài khoản của tôi',
                     href: routes.account,
                   },
-                  { label: 'Bài viết của tôi' },
+                  {
+                    label: 'Bài viết của tôi',
+                    href: routes.blogsByAuthor(user.slug),
+                  },
                   {
                     label: 'Đăng xuất',
                     onClick: () => {
@@ -133,7 +136,8 @@ export default function Header() {
             <Link
               href={routes.home}
               className={`pb-4 pt-5 px-2 mr-4 hover:text-emerald-500 inline-block border-b-4 border-transparent transition ${
-                pathname === routes.home && 'text-emerald-500 !border-emerald-500'
+                pathname === routes.home &&
+                'text-emerald-500 !border-emerald-500'
               }`}
             >
               HOME
@@ -142,7 +146,8 @@ export default function Header() {
             <Link
               href={routes.allBlogs}
               className={`pb-4 pt-5 px-2 mr-4 hover:text-emerald-500 text-gray-400 inline-block border-b-4 border-transparent transition ${
-                pathname === routes.allBlogs && 'text-emerald-500 !border-emerald-500'
+                pathname === routes.allBlogs &&
+                'text-emerald-500 !border-emerald-500'
               }`}
             >
               CHUNG

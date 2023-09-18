@@ -12,6 +12,11 @@ const usersService = {
     });
     return res.data;
   },
+
+  async getUserBySlug(slug: string) {
+    const res = await requests.get<User>('/users/' + slug);
+    return res.data;
+  },
 };
 
 export default usersService;

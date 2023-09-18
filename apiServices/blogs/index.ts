@@ -28,6 +28,13 @@ const blogsService = {
     );
     return res.data;
   },
+
+  async getBlogsByUser(user: string, params?: Params) {
+    const res = await requests.get<PaginatedData<Blog>>('/blogs/user/' + user, {
+      params,
+    });
+    return res.data;
+  },
 };
 
 export default blogsService;
