@@ -143,18 +143,18 @@ export default function Header() {
               HOME
             </Link>
 
-            <Link
-              href={routes.allBlogs}
-              className={`pb-4 pt-5 px-2 mr-4 hover:text-emerald-500 text-gray-400 inline-block border-b-4 border-transparent transition ${
-                pathname === routes.allBlogs &&
-                'text-emerald-500 !border-emerald-500'
-              }`}
-            >
-              CHUNG
-            </Link>
-
             {tags && (
               <div className="flex no-scrollbar whitespace-nowrap overflow-x-auto overflow-y-hidden space-x-3 items-center text-gray-400">
+                <Link
+                  href={routes.allBlogs}
+                  className={`pb-4 pt-5 px-2 mr-4 hover:text-emerald-500 text-gray-400 inline-block border-b-4 border-transparent transition ${
+                    pathname === routes.allBlogs &&
+                    'text-emerald-500 !border-emerald-500'
+                  }`}
+                >
+                  CHUNG
+                </Link>
+
                 {tags.map((tag, index) => {
                   const isActive = pathname === routes.blogsByTag(tag.slug);
 
