@@ -111,11 +111,11 @@ export default function BlogDetail() {
         <Image alt="" src={data.thumb} className="aspect-w-16 aspect-h-9" />
 
         <div className="flex mt-16">
-          <div className="mr-8 w-9/12">
+          <div className="w-[70%]">
             <TextEditorViewer content={data.content} />
           </div>
 
-          <div>
+          <div className='flex-1 ml-7'>
             <div className="space-y-16 sticky top-6 max-h-[calc(100vh-2rem)] overflow-y-auto">
               <div>
                 <Title className="!text-xl !mb-4">Mục lục</Title>
